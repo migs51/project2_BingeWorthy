@@ -2,3 +2,19 @@ form.signup,
 form.login {
   margin-top: 50px;
 }
+
+body{
+  background-color: #718096;
+  color: #81E6D9;
+}
+
+form{
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 25px;
+}
+
+#form-box{
+margin-left: auto;
+margin-right: auto;
+}
