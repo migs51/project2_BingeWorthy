@@ -1,7 +1,7 @@
 {
   "name": "1-passport-example",
   "version": "1.0.0",
-  "description": "",
+  "description": "## Scripts ### Install     npm install ### Run (production)     npm start ### Run (dev)     npm run watch ### Tests (includes linting)     npm test ### Linting by itself (only detects errors)     npm run lint ### Autofix linting errors where pssible (Note: this will not necessarily fix all of them)     npm run fix",
   "main": "server.js",
   "scripts": {
     "test": "npm run lint",
@@ -33,5 +33,13 @@
     "mocha": "^5.2.0",
     "nodemon": "^2.0.3",
     "prettier": "^1.13.7"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mmejares/project2_BingeWorthy.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mmejares/project2_BingeWorthy/issues"
+  },
+  "homepage": "https://github.com/mmejares/project2_BingeWorthy#readme"
 }
