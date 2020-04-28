@@ -23,3 +23,38 @@ margin-right: auto;
 #menu-toggle:checked + #menu{
     display: block
   }
+
+.search-box{
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  padding-top: 15%;
+  height: 40px;
+  border-radius: 40px;
+  padding-bottom: 10%;
+}
+
+.search-btn{
+  float: right;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-txt{
+  border: none;
+  outline: none;
+  float: left;
+  padding:0;
+  color: black;
+  font-size: large;
+  line-height: 40px;
+  width:250px;
+}
+
+.container{
+  object-position: bottom;
+}
