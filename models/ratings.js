@@ -1,4 +1,4 @@
-module.exports = function(sequelize, DataTypes) {
+/*module.exports = function(sequelize, DataTypes) {
   var Rating = sequelize.define("Rating", {
     title: {
       type: DataTypes.TEXT,
@@ -22,4 +22,4 @@ module.exports = function(sequelize, DataTypes) {
     }
   });
   return Rating;
-};
+}; */

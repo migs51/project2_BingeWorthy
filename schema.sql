@@ -15,15 +15,15 @@ CREATE TABLE shows (
   binge_rank INT NOT NULL,
 );
 
-CREATE TABLE ratings (
-  id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  title VARCHAR(100) NOT NULL,
-  rotten_tomatoes_ranking INT NOT NULL,
-  imdb_ranking INT NOT NULL,
+--CREATE TABLE ratings (
+  --id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  --title VARCHAR(100) NOT NULL,
+  --rotten_tomatoes_ranking INT NOT NULL,
+  --imdb_ranking INT NOT NULL,
   -- Changed bw users to bingRank in sequelize 
-  bw_users_input BOOLEAN NOT NULL,
-  web_scraper_ranking INT NOT NULL
-);
+  --bw_users_input BOOLEAN NOT NULL,
+  --web_scraper_ranking INT NOT NULL
+--);
 
 CREATE TABLE recommendation (
   id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,

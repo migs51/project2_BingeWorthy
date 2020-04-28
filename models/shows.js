@@ -30,6 +30,10 @@ module.exports = function(sequelize, DataTypes) {
     },
     bingeRank: {
       type: DataTypes.INT
+    },
+    rating: {
+      type: DataTypes.INT,
+      allowNull: false
     }
   });
   return Show;
