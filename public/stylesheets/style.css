@@ -6,6 +6,7 @@ form.login {
 body{
   background-color: #718096;
   color: #81E6D9;
+  
 }
 
 form{
@@ -18,3 +19,7 @@ form{
 margin-left: auto;
 margin-right: auto;
 }
+
+#menu-toggle:checked + #menu{
+    display: block
+  }
