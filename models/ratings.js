@@ -1,4 +1,4 @@
-/*module.exports = function(sequelize, DataTypes) {
+module.exports = function(sequelize, DataTypes) {
   var Rating = sequelize.define("Rating", {
     title: {
       type: DataTypes.TEXT,
@@ -8,18 +8,18 @@
       }
     },
     rottenTomatoesRanking: {
-      type: DataTypes.INT
+      type: DataTypes.INTEGER
     },
     imdbRanking: {
       type: DataTypes.DECIMAL
     },
     bingeRank: {
-      type: DataTypes.INT
+      type: DataTypes.INTEGER
     },
     webScraperRanking: {
-      type: DataTypes.INT,
+      type: DataTypes.INTEGER,
       allowNull: true
     }
   });
   return Rating;
-}; */
+};
