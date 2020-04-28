@@ -10,6 +10,79 @@ module.exports = function(app) {
     res.json(req.user);
   });
 
+  //Route for displaying top 10 shows in our database -JS
+  app.get("/api/shows/topshows", function(req, res) {
+    db.Show.findAll({
+      limit: 10,
+      order: ["bingeRank", "DESC"]
+    }).then(function(results) {
+      res.json(results);
+    });
+  });
+
+  //Route for displaying shows by streaming platform -JS
+  app.get("/api/shows/streamingService/:streamingService", function(req, res) {
+    db.Show.findAll({
+      where: {
+        streamingService: req.params.streamingService
+      }
+    }).then(function(results) {
+      res.json(results);
+    });
+  });
+
+  //Route for displaying shows by rating -JS
+  app.get("/api/shows/bingeRank", function(req, res) {
+    db.Show.findAll({
+      order: ["bingeRank", "DESC"]
+    }).then(function(results) {
+      res.json(results);
+    });
+  });
+
+  //Route for displaying shows by title -JS
+  app.get("/api/shows/title/:title", function(req, res) {
+    db.Show.findAll({
+      where: {
+        title: req.params.title
+      }
+    }).then(function(results) {
+      res.json(results);
+    });
+  });
+
+  //Route for displaying shows by genre -JS
+  app.get("/api/shows/genre/:genre", function(req, res) {
+    db.Show.findAll({
+      where: {
+        genre: req.params.genre
+      }
+    }).then(function(results) {
+      res.json(results);
+    });
+  });
+
+  //Route for displaying ALL shows in our database -JS
+  //Note - Don't use this one, use ALLSHOWS ordered by rating -JS
+  app.get("/api/shows", function(req, res) {
+    db.Show.findAll({}).then(function(results) {
+      res.json(results);
+    });
+  });
+
+  //Post route to record user boolean rating -JS
+  //How to validate user and limit them to 1 rating? Does this post code even work? What is req.body? -JS
+  app.post("/api/shows", function(req, res) {
+    //console.log(req.body);
+    db.Recommendation.create({
+      users: req.body.users,
+      shows: req.body.shows,
+      bingeable: req.body.bingeable
+    }).then(function(results) {
+      res.json(results);
+    });
+  });
+
   // Route for signing up a user. The user's password is automatically hashed and stored securely thanks to
   // how we configured our Sequelize User Model. If the user is created successfully, proceed to log the user in,
   // otherwise send back an error
