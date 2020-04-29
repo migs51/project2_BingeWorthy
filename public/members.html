@@ -38,32 +38,92 @@
         </a>
       </div>
       <div>
-        <a href="/logout" class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0">Log Out</a>
+        <a href="/logout"
+          class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0">Log
+          Out</a>
       </div>
     </div>
   </nav>
-<!-- Body -->
-<div class ="box">
-  <input class="rounded h-8 pr-5 text-black font-semibold" type="text" id = "search" placeholder="Search for Shows">
-  <button id= "showSearch"><i class="fas fa-search"></i></button>
-</div>
-  
-
-
-<div class="max-w-sm rounded overflow-hidden shadow-lg"></div>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6 col-md-offset-3">
-        <h2>Welcome <span class="member-name"></span></h2>
-        <!--upVote Feature------------------------------------->
-        <div id="showName">Show 1 
-        <button id="thumbsUp"><i class="far fa-thumbs-up" ></i></button> 
-        <button id="thumbsDown" style="margin-left: 7px;"><i class="far fa-thumbs-down"></i> </button> </div> 
+  <!-- Body -->
+  <div id="landing-page">
+    <section id="topShows">
+      <h2 class="bg-green-800 text-teal-200 text-2xl font-bold p-3 text-center">
+        Binge Worthy Shows
+      </h2>
+    </section>
+      <div class="max-w-sm rounded overflow-hidden shadow-lg bg-gray-900"></div>
+      <div class="container bg-gray-900">
+        <div class="row bg-gray-900">
+          <div class="col-md-6 col-md-offset-3 bg-gray-900">
+            <h2 class= bg-gray-900>Welcome <span class="member-name"></span></h2>
+            <!-- upVote Feature-----------------------------------
+            <div id="showName">Show 1
+              <button id="thumbsUp"><i class="far fa-thumbs-up"></i></button>
+              <button id="thumbsDown" style="margin-left: 7px;"><i class="far fa-thumbs-down"></i> </button> </div>
+          </div> 
+           ----------------------------------------------------------------- -->
         </div>
-        <!----------------------------------------------------------------------->
-    </div>
+      </div>
   </div>
-</div>
+
+  <!-- Trending Shows Tabs-->
+  <div id="showWell" class="inline-block flex flex-wrap bg-gray-900 items-center text-center p-2">
+    <div id="fountainG">
+      <div id="fountainG_1" class="fountainG"></div>
+      <div id="showName">Show 1
+        <a href="https://placeholder.com"><img src="https://via.placeholder.com/150"></a>
+        <button id="thumbsUp"><i class="far fa-thumbs-up"></i></button>
+        <button id="thumbsDown" style="margin-left: 7px;"><i class="far fa-thumbs-down"></i> </button> </div>
+    </div>
+    <div id="fountainG_2" class="fountainG p-2"></div>
+    <div id="showName">Show 1
+      <a href="https://placeholder.com"><img src="https://via.placeholder.com/150"></a>
+      <button id="thumbsUp"><i class="far fa-thumbs-up"></i></button>
+      <button id="thumbsDown" style="margin-left: 7px;"><i class="far fa-thumbs-down"></i> </button> </div>
+
+    <div id="fountainG_3" class="fountainG p-2"></div>
+    <div id="showName">Show 1
+      <a href="https://placeholder.com"><img src="https://via.placeholder.com/150"></a>
+      <button id="thumbsUp"><i class="far fa-thumbs-up"></i></button>
+      <button id="thumbsDown" style="margin-left: 7px;"><i class="far fa-thumbs-down"></i> </button> </div>
+
+    <div id="fountainG_4" class="fountainG p-2"></div>
+    <div id="showName">Show 1
+      <a href="https://placeholder.com"><img src="https://via.placeholder.com/150"></a>
+      <button id="thumbsUp"><i class="far fa-thumbs-up"></i></button>
+      <button id="thumbsDown" style="margin-left: 7px;"><i class="far fa-thumbs-down"></i> </button> </div>
+
+    <div id="fountainG_5" class="fountainG p-2"></div>
+    <div id="showName">Show 1
+      <a href="https://placeholder.com"><img src="https://via.placeholder.com/150"></a>
+      <button id="thumbsUp"><i class="far fa-thumbs-up"></i></button>
+      <button id="thumbsDown" style="margin-left: 7px;"><i class="far fa-thumbs-down"></i> </button> </div>
+
+    <div id="fountainG_6" class="fountainG p-2"></div>
+    <div id="showName">Show 1
+      <a href="https://placeholder.com"><img src="https://via.placeholder.com/150"></a>
+      <button id="thumbsUp"><i class="far fa-thumbs-up"></i></button>
+      <button id="thumbsDown" style="margin-left: 7px;"><i class="far fa-thumbs-down"></i> </button> </div>
+
+    <div id="fountainG_7" class="fountainG p-2"></div>
+    <div id="showName">Show 1
+      <a href="https://placeholder.com"><img src="https://via.placeholder.com/150"></a>
+      <button id="thumbsUp"><i class="far fa-thumbs-up"></i></button>
+      <button id="thumbsDown" style="margin-left: 7px;"><i class="far fa-thumbs-down"></i> </button> </div>
+
+    <div id="fountainG_8" class="fountainG p-2"></div>
+    <div id="showName">Show 1
+      <a href="https://placeholder.com"><img src="https://via.placeholder.com/150"></a>
+      <button id="thumbsUp"><i class="far fa-thumbs-up"></i></button>
+      <button id="thumbsDown" style="margin-left: 7px;"><i class="far fa-thumbs-down"></i> </button> </div>
+  
+  
+  </div>
+
+
+
+
+
 
 
   <footer class="w-full text-center font-semibold text-xl tracking-tight border-t border-grey p-4 mr-6">
@@ -89,3 +149,8 @@
     document.getElementById("nav-content").classList.toggle("hidden")
   }
 </script>
+
+<!-- <div class ="box">
+  <input class="rounded h-8 pr-5 text-black font-semibold" type="text" id = "search" placeholder="Search for Shows">
+  <button id= "showSearch"><i class="fas fa-search"></i></button>
+</div> -->
