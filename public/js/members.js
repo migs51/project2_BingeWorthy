@@ -8,17 +8,33 @@ $(document).ready(function() {
 
   // This file just does a GET request to figure out which user is logged in
   // and updates the HTML on the page
-  var userEmail = $.get("/api/user_data").then(function(data) {
+
+  //NEED TO FIGURE OUT WHY THIS IS RETURNING AN EMPTY OBJECT
+  let userEmail = $.get("/api/user_data").then(function() {
+      return this.email;
+  });
+
+  
+
+
+
+  $.get("/api/user_data").then(function(data) {
     $(".member-name").text(data.email);
   });
 
-  console.log(userEmail);
+  console.log("username is: " + userEmail);
   console.log(userName.val());
 
   let userRecco = {
-    users: "Joe",
+    users: JSON.stringify(userEmail),
     shows:  "West World",
     bingeable: true
+  }
+
+  let userThumbsDown = {
+    users: JSON.stringify(userEmail),
+    shows:  "Friends",
+    bingeable: false
   }
 
   console.log(userRecco);
@@ -36,13 +52,18 @@ $(document).ready(function() {
     console.log("button clicked");
   });
 
-  function downVote() {
-    thumbsDown.click(function() {
-      console.log("It worked");
-
-
+  function downVote(post) {
+    $.post("/api/shows/recommendations", post, function() {
+      window.location.href = "/members";
     });
   }
+
+  thumbsDown.click(function() {
+    downVote(userThumbsDown);
+    console.log("It worked");
+
+
+  });
   
-  downVote();
+ 
 });
