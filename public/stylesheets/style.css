@@ -1,7 +1,7 @@
-form.signup,
+/* form.signup,
 form.login {
   margin-top: 50px;
-}
+} */
 
 body{
   background-color: #718096;
@@ -23,3 +23,15 @@ margin-right: auto;
 #menu-toggle:checked + #menu{
     display: block
   }
+
+.box{
+  width: 100%;
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 10px;
+}
+
+
+
+
+
