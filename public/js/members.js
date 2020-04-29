@@ -42,12 +42,15 @@ $(document).ready(function() {
   function upVote(post) {
     $.post("/api/shows/recommendations", post, function() {
       window.location.href = "/members";
+      thumbsUp.attr("disabled", true);
     });
   }
 
-  thumbsUp.click(function() {
+  thumbsUp.on("click",function(e) {
+    e.preventDefault();
     upVote(userUpVote);
     console.log("button clicked");
+    thumbsUp.toggle();
   });
 
   function downVote(post) {
@@ -56,9 +59,11 @@ $(document).ready(function() {
     });
   }
 
-  thumbsDown.click(function() {
+  thumbsDown.click(function(e) {
+    e.preventDefault();
     downVote(userDownVote);
     console.log("It worked");
+    thumbsUp.toggle();
 
 
   });
