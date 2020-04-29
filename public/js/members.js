@@ -46,6 +46,15 @@ $(document).ready(function() {
     });
   }
 
+  function downVote(post) {
+    $.post("/api/shows/recommendations", post, function() {
+      window.location.href = "/members";
+    });
+  }
+
+  //click handlers for upVotes and downVotes
+  //need to Put request on the condition that the user has already clicked the button
+  //potentially get rid of the thumbsDown for MVP 
   thumbsUp.on("click",function(e) {
     e.preventDefault();
     upVote(userUpVote);
@@ -53,18 +62,11 @@ $(document).ready(function() {
     thumbsUp.toggle();
   });
 
-  function downVote(post) {
-    $.post("/api/shows/recommendations", post, function() {
-      window.location.href = "/members";
-    });
-  }
-
   thumbsDown.click(function(e) {
     e.preventDefault();
     downVote(userDownVote);
     console.log("It worked");
     thumbsUp.toggle();
-
 
   });
   
