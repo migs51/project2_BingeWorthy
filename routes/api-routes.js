@@ -72,7 +72,7 @@ module.exports = function(app) {
 
   //Post route to record user boolean rating -JS
   //How to validate user and limit them to 1 rating? Does this post code even work? What is req.body? -JS
-  app.post("/api/shows", function(req, res) {
+  app.post("/api/Recommendation", function(req, res) {
     //console.log(req.body);
     db.Recommendation.create({
       users: req.body.users,
