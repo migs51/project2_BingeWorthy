@@ -25,19 +25,17 @@ $(document).ready(function() {
   console.log("username is: " + userEmail);
   console.log(userName.val());
 
-  let userRecco = {
+  let userUpVote = {
     users: JSON.stringify(userEmail),
     shows:  "West World",
     bingeable: true
   }
 
-  let userThumbsDown = {
+  let userDownVote = {
     users: JSON.stringify(userEmail),
     shows:  "Friends",
     bingeable: false
   }
-
-  console.log(userRecco);
 
 
 
@@ -48,7 +46,7 @@ $(document).ready(function() {
   }
 
   thumbsUp.click(function() {
-    upVote(userRecco);
+    upVote(userUpVote);
     console.log("button clicked");
   });
 
@@ -59,7 +57,7 @@ $(document).ready(function() {
   }
 
   thumbsDown.click(function() {
-    downVote(userThumbsDown);
+    downVote(userDownVote);
     console.log("It worked");
 
 
