@@ -2,6 +2,8 @@ $(document).ready(function() {
   //global variables
   var thumbsUp = $("#thumbsUp");
   var thumbsDown = $("#thumbsDown");
+  var landingpage = $("#landing-page");
+  var netflix = $("#netflixPage");
   // var showName = $("#showName");
   var userName = $("#userEmail");
 
@@ -61,4 +63,20 @@ $(document).ready(function() {
     console.log("It worked");
     thumbsUp.toggle();
   });
+
+  //For switching pages.
+  $("#homepage").on("click", function() {
+    netflix.addClass("collapsed", 300, function() {
+      landingpage.removeClass("collapsed", 300);
+    });
+  });
+
+  $("#netflix-btn").on("click", function() {
+    landingpage.addClass("collapsed", 300, function() {
+      netflix.removeClass("collapsed", 300);
+    });
+  });
+
+
+
 });

@@ -12,28 +12,32 @@
 
 <body>
   <nav class="flex items-center justify-between flex-wrap bg-teal-500 p-6">
-    <div class="flex items-center flex-shrink-0 text-white mr-6">
-      <span class="font-semibold text-xl tracking-tight">BINGE WORTHY</span>
+    <div id="homepage-btn" class="flex items-center flex-shrink-0 text-white mr-6 cursor-pointer">
+      <span class="font-semibold text-xl tracking-tight hover:text-black">BINGE WORTHY</span>
     </div>
     <div class="block lg:hidden">
-      <button id ="nav-toggle" class="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white">
-        <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
+      <button id="nav-toggle"
+        class="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-black hover:border-black">
+        <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+          <title>Menu</title>
+          <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+        </svg>
       </button>
     </div>
-    <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block pt-6 lg:pt-0" id= "nav-content">
+    <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block pt-6 lg:pt-0" id="nav-content">
       <div class="text-md lg:flex-grow">
-        <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
+        <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-black mr-4">
           Hulu
         </a>
-        <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
+        <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-black mr-4">
           NetFlix
         </a>
-        <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white">
+        <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-black">
           Amazon
         </a>
       </div>
       <div>
-        <a href="/login" class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0">Log In</a>
+        <a href="/login" class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-black mt-4 lg:mt-0">Log In</a>
       </div>
     </div>
   </nav>
@@ -43,10 +47,10 @@
   <div class="w-full max-w-xs text-center" id= "form-box">
     <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 login">
       <div class="mb-4">
-        <label class="block text-gray-700 text-sm font-bold mb-2" for="username">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="email">
           E-Mail
         </label>
-        <input id="username" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username" type="text" placeholder="Username">
+        <input id="email" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username" type="text" placeholder="Username">
       </div>
       <div class="mb-6">
         <label class="block text-gray-700 text-sm font-bold mb-2" for="password">
@@ -70,11 +74,11 @@
 
 <footer class="w-full text-center font-semibold text-xl tracking-tight border-t border-grey p-4 mr-6">
   <div>
-    <a href="" class="btn btn-primary px-1">Miguel</a>
-    <a href="https://warsurge.github.io/homework-2/" class="btn btn-success px-1">Surge</a>
-    <a href="" class="btn btn-info px-1">Robert</a>
-    <a href="" class="btn btn-info px-1">Jason</a>
-    <a href="" class="btn btn-info px-1">Kyle</a>
+    <a href="" class="btn btn-primary px-1 hover:text-red-500">Miguel</a>
+    <a href="https://warsurge.github.io/homework-2/" class="btn btn-success px-1 hover:text-red-500">Surge</a>
+    <a href="" class="btn btn-info px-1 hover:text-red-500">Robert</a>
+    <a href="" class="btn btn-info px-1 hover:text-red-500">Jason</a>
+    <a href="" class="btn btn-info px-1 hover:text-red-500">Kyle</a>
   </div>
   
 </footer>
