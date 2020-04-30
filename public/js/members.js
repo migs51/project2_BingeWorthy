@@ -1,8 +1,8 @@
 $(document).ready(function() {
   //global variables
-  var thumbsUp = $("#thumbsUp");
+  // var thumbsUp = $("#thumbsUp");
   var thumbsDown = $("#thumbsDown");
-  var userName = $("#userEmail");
+  // var userName = $("#userEmail");
   var netflix = $("#netflix");
   var showName1 = $("#showName1");
   var poster1 = $("#poster1");
@@ -27,7 +27,7 @@ $(document).ready(function() {
   // and updates the HTML on the page
 
   console.log(showName1.html());
-  $(document).on("click", "button#thumbsUp", thumbsUpFunction)
+  $(document).on("click", "button#thumbsUp", thumbsUpFunction);
   //capture email address of user in variable
   function thumbsUpFunction() {
     console.log(showName1.html());
@@ -37,17 +37,15 @@ $(document).ready(function() {
     //     shows: showName1.html(),
     //     bingeable: true
     //   };
-  //     thumbsUp.on("click", function() {
-  //       upVote(userUpVote);
-  //       console.log("button clicked");
-  //       // thumbsUp.toggle();
-  //     });
-  //  });
-  } 
+    //     thumbsUp.on("click", function() {
+    //       upVote(userUpVote);
+    //       console.log("button clicked");
+    //       // thumbsUp.toggle();
+    //     });
+    //  });
+  }
 
   // thumbsUpFunction();
-
-
 
   $.get("/api/user_data").then(function(data) {
     $(".member-name").text(data.email);
@@ -59,12 +57,12 @@ $(document).ready(function() {
     bingeable: false
   };
 
-  function upVote(post) {
-    $.post("/api/shows/recommendations", post, function() {
-      window.location.href = "/members";
-      // thumbsUp.attr("disabled", true);
-    });
-  }
+  // function upVote(post) {
+  //   $.post("/api/shows/recommendations", post, function() {
+  //     window.location.href = "/members";
+  //     // thumbsUp.attr("disabled", true);
+  //   });
+  // }
 
   function downVote(post) {
     $.post("/api/shows/recommendations", post, function() {
@@ -75,7 +73,6 @@ $(document).ready(function() {
   //click handlers for upVotes and downVotes
   //need to Put request on the condition that the user has already clicked the button
   //potentially get rid of the thumbsDown for MVP
-
 
   thumbsDown.click(function(e) {
     e.preventDefault();
@@ -105,19 +102,16 @@ $(document).ready(function() {
       poster8.html(`<img src = ${data[7].results_artwork_208x117}>`);
       showName9.text(data[8].results_title);
       poster9.html(`<img src = ${data[8].results_artwork_208x117}>`);
-  
     });
   }
 
   allShows();
- 
-
 
   //netflix top shows upon click
   netflix.click(function() {
     $.get("api/shows/netflixes").then(function(data) {
       console.log(data);
-      
+
       showName1.text(data[0].results_title);
       poster1.html(`<img src = ${data[0].results_artwork_208x117}>`);
       showName2.text(data[1].results_title);
@@ -136,13 +130,6 @@ $(document).ready(function() {
       poster8.html(`<img src = ${data[7].results_artwork_208x117}>`);
       showName9.text(data[8].results_title);
       poster9.html(`<img src = ${data[8].results_artwork_208x117}>`);
-  
     });
-   
-  })
-  
-
- 
-
-
+  });
 });
