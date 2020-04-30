@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$(document).ready(function() {
   //global variables
   var thumbsUp = $("#thumbsUp");
   var thumbsDown = $("#thumbsDown");
@@ -6,7 +6,7 @@ $(document).ready(function () {
   var netflix = $("#netflixPage");
   var hulu = $("#huluPage");
   var amazon = $("#amazonPage");
-  var hbo = $("#hboPage")
+  var hbo = $("#hboPage");
   // var showName = $("#showName");
   var userName = $("#userEmail");
 
@@ -14,11 +14,11 @@ $(document).ready(function () {
   // and updates the HTML on the page
 
   //NEED TO FIGURE OUT WHY THIS IS RETURNING AN EMPTY OBJECT
-  var userEmail = $.get("/api/user_data").then(function () {
+  var userEmail = $.get("/api/user_data").then(function() {
     return this.email;
   });
 
-  $.get("/api/user_data").then(function (data) {
+  $.get("/api/user_data").then(function(data) {
     $(".member-name").text(data.email);
   });
 
@@ -38,14 +38,14 @@ $(document).ready(function () {
   };
 
   function upVote(post) {
-    $.post("/api/shows/recommendations", post, function () {
+    $.post("/api/shows/recommendations", post, function() {
       window.location.href = "/members";
       thumbsUp.attr("disabled", true);
     });
   }
 
   function downVote(post) {
-    $.post("/api/shows/recommendations", post, function () {
+    $.post("/api/shows/recommendations", post, function() {
       window.location.href = "/members";
     });
   }
@@ -53,14 +53,14 @@ $(document).ready(function () {
   //click handlers for upVotes and downVotes
   //need to Put request on the condition that the user has already clicked the button
   //potentially get rid of the thumbsDown for MVP
-  thumbsUp.on("click", function (e) {
+  thumbsUp.on("click", function(e) {
     e.preventDefault();
     upVote(userUpVote);
     console.log("button clicked");
     thumbsUp.toggle();
   });
 
-  thumbsDown.click(function (e) {
+  thumbsDown.click(function(e) {
     e.preventDefault();
     downVote(userDownVote);
     console.log("It worked");
@@ -69,7 +69,6 @@ $(document).ready(function () {
 
   //For switching pages.
   // function switchPages(){}
-
 
   // $("#homepage").on("click", function() {
   //   console.log("ive been clicked")
@@ -108,8 +107,7 @@ $(document).ready(function () {
     });
   });
   // For toggle the menu button
-  document.getElementById('nav-toggle').onclick = function () {
-    document.getElementById("nav-content").classList.toggle("hidden")
-  }
-  
+  document.getElementById("nav-toggle").onclick = function() {
+    document.getElementById("nav-content").classList.toggle("hidden");
+  };
 });
