@@ -3,7 +3,7 @@ $(document).ready(function() {
   // var thumbsUp = $("#thumbsUp");
   var thumbsDown = $("#thumbsDown");
   // var userName = $("#userEmail");
-  var netflix = $("#netflix");
+  var netflix = $("#netflix-btn");
   var showName1 = $("#showName1");
   var poster1 = $("#poster1");
   var showName2 = $("#showName2");
