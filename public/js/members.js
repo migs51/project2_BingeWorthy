@@ -28,7 +28,6 @@ $(document).ready(function() {
   var amazon = $("#amazonPage");
   var hbo = $("#hboPage");
   // var showName = $("#showName");
-  var userName = $("#userEmail");
 
   // This file just does a GET request to figure out which user is logged in
   // and updates the HTML on the page
