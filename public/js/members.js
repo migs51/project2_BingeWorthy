@@ -26,26 +26,35 @@ $(document).ready(function() {
   // This file just does a GET request to figure out which user is logged in
   // and updates the HTML on the page
 
-  //NEED TO FIGURE OUT WHY THIS IS RETURNING AN EMPTY OBJECT
-  var userEmail = $.get("/api/user_data").then(function() {
-    return this.email;
-  });
+  console.log(showName1.html());
+  $(document).on("click", "button#thumbsUp", thumbsUpFunction)
+  //capture email address of user in variable
+  function thumbsUpFunction() {
+    console.log(showName1.html());
+    // $.get("/api/user_data", function(data) {
+    //   var userUpVote = {
+    //     users: data.email,
+    //     shows: showName1.html(),
+    //     bingeable: true
+    //   };
+  //     thumbsUp.on("click", function() {
+  //       upVote(userUpVote);
+  //       console.log("button clicked");
+  //       // thumbsUp.toggle();
+  //     });
+  //  });
+  } 
+
+  // thumbsUpFunction();
+
+
 
   $.get("/api/user_data").then(function(data) {
     $(".member-name").text(data.email);
   });
 
-  console.log("username is: " + userEmail);
-  console.log(userName.val());
-
-  var userUpVote = {
-    users: JSON.stringify(userEmail),
-    shows: "West World",
-    bingeable: true
-  };
-
   var userDownVote = {
-    users: JSON.stringify(userEmail),
+    users: "bob",
     shows: "Friends",
     bingeable: false
   };
@@ -53,7 +62,7 @@ $(document).ready(function() {
   function upVote(post) {
     $.post("/api/shows/recommendations", post, function() {
       window.location.href = "/members";
-      thumbsUp.attr("disabled", true);
+      // thumbsUp.attr("disabled", true);
     });
   }
 
@@ -66,18 +75,13 @@ $(document).ready(function() {
   //click handlers for upVotes and downVotes
   //need to Put request on the condition that the user has already clicked the button
   //potentially get rid of the thumbsDown for MVP
-  thumbsUp.on("click", function(e) {
-    e.preventDefault();
-    upVote(userUpVote);
-    console.log("button clicked");
-    thumbsUp.toggle();
-  });
+
 
   thumbsDown.click(function(e) {
     e.preventDefault();
     downVote(userDownVote);
     console.log("It worked");
-    thumbsDown.toggle();
+    // thumbsDown.toggle();
   });
 
   //ajax get request to grab top shows
