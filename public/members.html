@@ -13,12 +13,13 @@
 
 <body>
   <nav class="flex items-center justify-between flex-wrap bg-teal-500 p-6">
-    <div class="flex items-center flex-shrink-0 text-white mr-6">
-      <span class="font-semibold text-xl tracking-tight">BINGE WORTHY</span>
-    </div>
+    <button id="homepage"
+      class="font-semibold text-xl tracking-tight hover:text-black flex items-center flex-shrink-0 text-white mr-6 cursor-pointer">
+      BINGE WORTHY
+    </button>
     <div class="block lg:hidden">
       <button id="nav-toggle"
-        class="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white">
+        class="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-black hover:border-black">
         <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
           <title>Menu</title>
           <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
@@ -27,19 +28,22 @@
     </div>
     <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block pt-6 lg:pt-0" id="nav-content">
       <div class="text-md lg:flex-grow">
-        <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
+        <button id="hulu-btn" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-black mr-4">
           Hulu
-        </a>
-        <a href="#responsive-header" id="netflix" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
-          NetFlix
-        </a>
-        <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white">
-          Amazon
-        </a>
+        </button>
+          <button id="netflix-btn" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-black mr-4">
+            NetFlix
+          </button>
+          <button id="amazon-btn" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-black">
+            Amazon
+          </button>
+          <button id="hbo-btn" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-black">
+            HBO
+          </button>
       </div>
       <div>
         <a href="/logout"
-          class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0">Log
+          class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-black mt-4 lg:mt-0">Log
           Out</a>
       </div>
     </div>
@@ -47,24 +51,18 @@
   <!-- Body -->
   <div id="landing-page">
     <section id="topShows">
-      <h2 class="bg-green-800 text-teal-200 text-2xl font-bold p-3 text-center">
+      <h2 class="bg-grey-900 text-teal-200 text-2xl font-bold p-3 text-center">
         Binge Worthy Shows
       </h2>
     </section>
-      <div class="max-w-sm rounded overflow-hidden shadow-lg"></div>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6 col-md-offset-3">
-            <h2>Welcome <span class="member-name"></span></h2>
-            <!-- upVote Feature-----------------------------------
-            <div id="showName">Show 1
-              <button id="thumbsUp"><i class="far fa-thumbs-up"></i></button>
-              <button id="thumbsDown" style="margin-left: 7px;"><i class="far fa-thumbs-down"></i> </button> </div>
-          </div> 
-           ----------------------------------------------------------------- -->
+    <div class="max-w-sm rounded overflow-hidden shadow-lg"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+          <h2 class="text-2xl">Welcome <span class="member-name"></span></h2>
         </div>
       </div>
-  </div>
+    </div>
 
   <!-- Trending Shows Tabs-->
   <div id="showWell" class="inline-block flex flex-wrap bg-gray-900 text-center p-2 center">
@@ -124,7 +122,8 @@
       <div id="poster8"></div>
       <button id="thumbsUp"><i class="far fa-thumbs-up"></i></button>
       <button id="thumbsDown" style="margin-left: 7px;"><i class="far fa-thumbs-down"></i> </button> </div>
-      <div id="fountainG_8" class="fountainG p-2"></div>
+    <div id="fountainG_8" class="fountainG p-2"></div>
+
     <div id="showName">
       <div id="showName9"> Show 9</div>
       <div id="poster9"></div>
@@ -134,55 +133,353 @@
   
   </div>
 
-  <!-- <div id="artistPage" class="collapsed"> -->
-    <!-- Artist Name -->
-    <!-- <section>
-        <div id="artistBanner" class="relative bg-teal-900 text-green-100 p-0 pb-5 flex content-end overflow-hidden">
-            <div class="relative flex-shrink-0 mx-2" style="height:200px!important; width:200px!important;">
-                <div class="absolute rounded-full h-full w-full overflow-hidden shadow-lg" style="bottom:-40px;">
-                    <img id="artistBannerPic" class="h-full w-full" src="", alt="">
-                </div>
-            </div>
-            <div class="">
-                <h2 id="artistBannerName" class="text-4xl font-bold ">
-                    Artist Name
-                </h2>
-                <div id="genreWell" class=""></div>
-            </div>
-        </div>
-    </section> -->
-
-    <!-- Album  -->
-    <!-- <section>
-        <h2 class="bg-teal-700 text-green-100 text-2xl font-bold p-3">
-            Albums
-        </h2>
-        <div id="albumWell" class="flex flex-wrap bg-gray-400 overflow-hidden"></div>
-    </section>
-
-
-
+  <!-- NETFLIX PAGE -->
+  <div id="netflixPage" class="hidden">
     <section>
-        <h2 class="bg-teal-700 text-green-100 text-2xl font-bold p-3">
-            Upcoming Events
-        </h2>
+      <div id="netflixBanner" class="relative bg-grey-900 text-teal-200 p-0 pb-5 flex content-end overflow-hidden">
+        <div class="relative flex-shrink-0 mx-2" style="height:200px!important; width:200px!important;">
+          <div class="absolute rounded-full h-25% w-25% overflow-hidden shadow-lg" style="bottom:-40px;">
+            <img id="NetFlix" class="h-5px w-5px object-contain"
+              src="C:\Users\13044\Desktop\project2_BingeWorthy\netflix logo.png" , alt="NetFlix Logo">
+          </div>
+        </div>
+        <div class="">
+          <h2 id="serviceBannerName" class="text-4xl font-bold text-center">
+            NetFlix
+          </h2>
+          <div id="showWell" class="inline-block flex flex-wrap bg-gray-900 text-center p-2 center">
+            <div id="fountainG">
+              <div id="fountainG_1" class="fountainG"></div>
+              <div id="showName">Show 1
+                <a href="https://placeholder.com"><img src="https://via.placeholder.com/150"></a>
+                <button id="thumbsUp"><i class="far fa-thumbs-up"></i></button>
+                <button id="thumbsDown" style="margin-left: 7px;"><i class="far fa-thumbs-down"></i> </button> </div>
+            </div>
+            <div id="fountainG_2" class="fountainG p-2"></div>
+            <div id="showName">Show 2
+              <a href="https://placeholder.com"><img src="https://via.placeholder.com/150"></a>
+              <button id="thumbsUp"><i class="far fa-thumbs-up"></i></button>
+              <button id="thumbsDown" style="margin-left: 7px;"><i class="far fa-thumbs-down"></i> </button> </div>
 
-        <div id="eventWell" class="flex flex-wrap"></div>
-    </section>
+            <div id="fountainG_3" class="fountainG p-2"></div>
+            <div id="showName">Show 3
+              <a href="https://placeholder.com"><img src="https://via.placeholder.com/150"></a>
+              <button id="thumbsUp"><i class="far fa-thumbs-up"></i></button>
+              <button id="thumbsDown" style="margin-left: 7px;"><i class="far fa-thumbs-down"></i> </button> </div>
 
-</div> -->
+            <div id="fountainG_4" class="fountainG p-2"></div>
+            <div id="showName">Show 4
+              <a href="https://placeholder.com"><img src="https://via.placeholder.com/150"></a>
+              <button id="thumbsUp"><i class="far fa-thumbs-up"></i></button>
+              <button id="thumbsDown" style="margin-left: 7px;"><i class="far fa-thumbs-down"></i> </button> </div>
+
+            <div id="fountainG_5" class="fountainG p-2"></div>
+            <div id="showName">Show 5
+              <a href="https://placeholder.com"><img src="https://via.placeholder.com/150"></a>
+              <button id="thumbsUp"><i class="far fa-thumbs-up"></i></button>
+              <button id="thumbsDown" style="margin-left: 7px;"><i class="far fa-thumbs-down"></i> </button> </div>
+
+            <div id="fountainG_6" class="fountainG p-2"></div>
+            <div id="showName">Show 6
+              <a href="https://placeholder.com"><img src="https://via.placeholder.com/150"></a>
+              <button id="thumbsUp"><i class="far fa-thumbs-up"></i></button>
+              <button id="thumbsDown" style="margin-left: 7px;"><i class="far fa-thumbs-down"></i> </button> </div>
+
+            <div id="fountainG_7" class="fountainG p-2"></div>
+            <div id="showName">Show 7
+              <a href="https://placeholder.com"><img src="https://via.placeholder.com/150"></a>
+              <button id="thumbsUp"><i class="far fa-thumbs-up"></i></button>
+              <button id="thumbsDown" style="margin-left: 7px;"><i class="far fa-thumbs-down"></i> </button> </div>
+
+            <div id="fountainG_8" class="fountainG p-2"></div>
+            <div id="showName">Show 8
+              <a href="https://placeholder.com"><img src="https://via.placeholder.com/150"></a>
+              <button id="thumbsUp"><i class="far fa-thumbs-up"></i></button>
+              <button id="thumbsDown" style="margin-left: 7px;"><i class="far fa-thumbs-down"></i> </button> </div>
+
+            <div id="fountainG_9" class="fountainG p-2"></div>
+            <div id="showName">Show 9
+              <a href="https://placeholder.com"><img src="https://via.placeholder.com/150"></a>
+              <button id="thumbsUp"><i class="far fa-thumbs-up"></i></button>
+              <button id="thumbsDown" style="margin-left: 7px;"><i class="far fa-thumbs-down"></i> </button> </div>
+
+            <div id="fountainG_10" class="fountainG p-2"></div>
+            <div id="showName">Show 10
+              <a href="https://placeholder.com"><img src="https://via.placeholder.com/150"></a>
+              <button id="thumbsUp"><i class="far fa-thumbs-up"></i></button>
+              <button id="thumbsDown" style="margin-left: 7px;"><i class="far fa-thumbs-down"></i> </button> </div>
 
 
+          </div>
+        </div>
+      </div>
+  
+  </section>
+
+  </div>
+
+  <!-- HULU PAGE -->
+  <div id="huluPage" class="hidden">
+    <section>
+      <div id="huluBanner" class="relative bg-grey-900 text-teal-200 p-0 pb-5 flex content-end overflow-hidden">
+        <div class="relative flex-shrink-0 mx-2" style="height:200px!important; width:200px!important;">
+          <div class="absolute rounded-full h-full w-full overflow-hidden shadow-lg" style="bottom:-40px;">
+            <img id="HULU" class="h-full w-full" src="C:\Users\13044\Desktop\project2_BingeWorthy\hulu.png" ,
+              alt="HULU Logo">
+          </div>
+        </div>
+        <div class="">
+          <h2 id="serviceBannerName" class="text-4xl font-bold text-center">
+            HULU
+          </h2>
+          <div id="showWell" class="inline-block flex flex-wrap bg-gray-900 text-center p-2 center">
+            <div id="fountainG">
+              <div id="fountainG_1" class="fountainG"></div>
+              <div id="showName">Show 1
+                <a href="https://placeholder.com"><img src="https://via.placeholder.com/150"></a>
+                <button id="thumbsUp"><i class="far fa-thumbs-up"></i></button>
+                <button id="thumbsDown" style="margin-left: 7px;"><i class="far fa-thumbs-down"></i> </button> </div>
+            </div>
+            <div id="fountainG_2" class="fountainG p-2"></div>
+            <div id="showName">Show 2
+              <a href="https://placeholder.com"><img src="https://via.placeholder.com/150"></a>
+              <button id="thumbsUp"><i class="far fa-thumbs-up"></i></button>
+              <button id="thumbsDown" style="margin-left: 7px;"><i class="far fa-thumbs-down"></i> </button> </div>
+
+            <div id="fountainG_3" class="fountainG p-2"></div>
+            <div id="showName">Show 3
+              <a href="https://placeholder.com"><img src="https://via.placeholder.com/150"></a>
+              <button id="thumbsUp"><i class="far fa-thumbs-up"></i></button>
+              <button id="thumbsDown" style="margin-left: 7px;"><i class="far fa-thumbs-down"></i> </button> </div>
+
+            <div id="fountainG_4" class="fountainG p-2"></div>
+            <div id="showName">Show 4
+              <a href="https://placeholder.com"><img src="https://via.placeholder.com/150"></a>
+              <button id="thumbsUp"><i class="far fa-thumbs-up"></i></button>
+              <button id="thumbsDown" style="margin-left: 7px;"><i class="far fa-thumbs-down"></i> </button> </div>
+
+            <div id="fountainG_5" class="fountainG p-2"></div>
+            <div id="showName">Show 5
+              <a href="https://placeholder.com"><img src="https://via.placeholder.com/150"></a>
+              <button id="thumbsUp"><i class="far fa-thumbs-up"></i></button>
+              <button id="thumbsDown" style="margin-left: 7px;"><i class="far fa-thumbs-down"></i> </button> </div>
+
+            <div id="fountainG_6" class="fountainG p-2"></div>
+            <div id="showName">Show 6
+              <a href="https://placeholder.com"><img src="https://via.placeholder.com/150"></a>
+              <button id="thumbsUp"><i class="far fa-thumbs-up"></i></button>
+              <button id="thumbsDown" style="margin-left: 7px;"><i class="far fa-thumbs-down"></i> </button> </div>
+
+            <div id="fountainG_7" class="fountainG p-2"></div>
+            <div id="showName">Show 7
+              <a href="https://placeholder.com"><img src="https://via.placeholder.com/150"></a>
+              <button id="thumbsUp"><i class="far fa-thumbs-up"></i></button>
+              <button id="thumbsDown" style="margin-left: 7px;"><i class="far fa-thumbs-down"></i> </button> </div>
+
+            <div id="fountainG_8" class="fountainG p-2"></div>
+            <div id="showName">Show 8
+              <a href="https://placeholder.com"><img src="https://via.placeholder.com/150"></a>
+              <button id="thumbsUp"><i class="far fa-thumbs-up"></i></button>
+              <button id="thumbsDown" style="margin-left: 7px;"><i class="far fa-thumbs-down"></i> </button> </div>
+
+            <div id="fountainG_9" class="fountainG p-2"></div>
+            <div id="showName">Show 9
+              <a href="https://placeholder.com"><img src="https://via.placeholder.com/150"></a>
+              <button id="thumbsUp"><i class="far fa-thumbs-up"></i></button>
+              <button id="thumbsDown" style="margin-left: 7px;"><i class="far fa-thumbs-down"></i> </button> </div>
+
+            <div id="fountainG_10" class="fountainG p-2"></div>
+            <div id="showName">Show 10
+              <a href="https://placeholder.com"><img src="https://via.placeholder.com/150"></a>
+              <button id="thumbsUp"><i class="far fa-thumbs-up"></i></button>
+              <button id="thumbsDown" style="margin-left: 7px;"><i class="far fa-thumbs-down"></i> </button> </div>
 
 
+          </div>
+        </div>
+      </div>
+  
+  </section>
 
+  </div>
+  <!-- AMAZON PAGE -->
+  <div id="amazonPage" class="hidden">
+    <section>
+      <div id="amazonBanner" class="relative bg-grey-900 text-teal-200 p-0 pb-5 flex content-end overflow-hidden">
+        <div class="relative flex-shrink-0 mx-2" style="height:200px!important; width:200px!important;">
+          <div class="absolute rounded-full h-full w-full overflow-hidden shadow-lg" style="bottom:-40px;">
+            <img id="Amazon" class="h-full w-full"
+              src="C:\Users\13044\Desktop\project2_BingeWorthy\amazon-logo-transparent.png" , alt="NetFlix Logo">
+          </div>
+        </div>
+        <div class="">
+          <h2 id="serviceBannerName" class="text-4xl font-bold text-center">
+            AMAZON
+          </h2>
+          <div id="showWell" class="inline-block flex flex-wrap bg-gray-900 text-center p-2 center">
+            <div id="fountainG">
+              <div id="fountainG_1" class="fountainG"></div>
+              <div id="showName">Show 1
+                <a href="https://placeholder.com"><img src="https://via.placeholder.com/150"></a>
+                <button id="thumbsUp"><i class="far fa-thumbs-up"></i></button>
+                <button id="thumbsDown" style="margin-left: 7px;"><i class="far fa-thumbs-down"></i> </button> </div>
+            </div>
+            <div id="fountainG_2" class="fountainG p-2"></div>
+            <div id="showName">Show 2
+              <a href="https://placeholder.com"><img src="https://via.placeholder.com/150"></a>
+              <button id="thumbsUp"><i class="far fa-thumbs-up"></i></button>
+              <button id="thumbsDown" style="margin-left: 7px;"><i class="far fa-thumbs-down"></i> </button> </div>
+
+            <div id="fountainG_3" class="fountainG p-2"></div>
+            <div id="showName">Show 3
+              <a href="https://placeholder.com"><img src="https://via.placeholder.com/150"></a>
+              <button id="thumbsUp"><i class="far fa-thumbs-up"></i></button>
+              <button id="thumbsDown" style="margin-left: 7px;"><i class="far fa-thumbs-down"></i> </button> </div>
+
+            <div id="fountainG_4" class="fountainG p-2"></div>
+            <div id="showName">Show 4
+              <a href="https://placeholder.com"><img src="https://via.placeholder.com/150"></a>
+              <button id="thumbsUp"><i class="far fa-thumbs-up"></i></button>
+              <button id="thumbsDown" style="margin-left: 7px;"><i class="far fa-thumbs-down"></i> </button> </div>
+
+            <div id="fountainG_5" class="fountainG p-2"></div>
+            <div id="showName">Show 5
+              <a href="https://placeholder.com"><img src="https://via.placeholder.com/150"></a>
+              <button id="thumbsUp"><i class="far fa-thumbs-up"></i></button>
+              <button id="thumbsDown" style="margin-left: 7px;"><i class="far fa-thumbs-down"></i> </button> </div>
+
+            <div id="fountainG_6" class="fountainG p-2"></div>
+            <div id="showName">Show 6
+              <a href="https://placeholder.com"><img src="https://via.placeholder.com/150"></a>
+              <button id="thumbsUp"><i class="far fa-thumbs-up"></i></button>
+              <button id="thumbsDown" style="margin-left: 7px;"><i class="far fa-thumbs-down"></i> </button> </div>
+
+            <div id="fountainG_7" class="fountainG p-2"></div>
+            <div id="showName">Show 7
+              <a href="https://placeholder.com"><img src="https://via.placeholder.com/150"></a>
+              <button id="thumbsUp"><i class="far fa-thumbs-up"></i></button>
+              <button id="thumbsDown" style="margin-left: 7px;"><i class="far fa-thumbs-down"></i> </button> </div>
+
+            <div id="fountainG_8" class="fountainG p-2"></div>
+            <div id="showName">Show 8
+              <a href="https://placeholder.com"><img src="https://via.placeholder.com/150"></a>
+              <button id="thumbsUp"><i class="far fa-thumbs-up"></i></button>
+              <button id="thumbsDown" style="margin-left: 7px;"><i class="far fa-thumbs-down"></i> </button> </div>
+
+            <div id="fountainG_9" class="fountainG p-2"></div>
+            <div id="showName">Show 9
+              <a href="https://placeholder.com"><img src="https://via.placeholder.com/150"></a>
+              <button id="thumbsUp"><i class="far fa-thumbs-up"></i></button>
+              <button id="thumbsDown" style="margin-left: 7px;"><i class="far fa-thumbs-down"></i> </button> </div>
+
+            <div id="fountainG_10" class="fountainG p-2"></div>
+            <div id="showName">Show 10
+              <a href="https://placeholder.com"><img src="https://via.placeholder.com/150"></a>
+              <button id="thumbsUp"><i class="far fa-thumbs-up"></i></button>
+              <button id="thumbsDown" style="margin-left: 7px;"><i class="far fa-thumbs-down"></i> </button> </div>
+
+
+          </div>
+        </div>
+      </div>
+  
+  </section>
+
+  </div>
+  
+  <!-- HBO -->
+  <div id="hboPage" class="hidden">
+    <section>
+      <div id="hboBanner" class="relative bg-grey-900 text-teal-200 p-0 pb-5 flex content-end overflow-hidden">
+        <div class="relative flex-shrink-0 mx-2" style="height:200px!important; width:200px!important;">
+          <div class="absolute rounded-full h-full w-full overflow-hidden shadow-lg" style="bottom:-40px;">
+            <img id="Amazon" class="h-full w-full"
+              src="C:\Users\13044\Desktop\project2_BingeWorthy\HBO-Logo.png" , alt="HBO Logo">
+          </div>
+        </div>
+        <div class="">
+          <h2 id="serviceBannerName" class="text-4xl font-bold text-center">
+            HBO
+          </h2>
+          <div id="showWell" class="inline-block flex flex-wrap bg-gray-900 text-center p-2 center">
+            <div id="fountainG">
+              <div id="fountainG_1" class="fountainG"></div>
+              <div id="showName">Show 1
+                <a href="https://placeholder.com"><img src="https://via.placeholder.com/150"></a>
+                <button id="thumbsUp"><i class="far fa-thumbs-up"></i></button>
+                <button id="thumbsDown" style="margin-left: 7px;"><i class="far fa-thumbs-down"></i> </button> </div>
+            </div>
+            <div id="fountainG_2" class="fountainG p-2"></div>
+            <div id="showName">Show 2
+              <a href="https://placeholder.com"><img src="https://via.placeholder.com/150"></a>
+              <button id="thumbsUp"><i class="far fa-thumbs-up"></i></button>
+              <button id="thumbsDown" style="margin-left: 7px;"><i class="far fa-thumbs-down"></i> </button> </div>
+
+            <div id="fountainG_3" class="fountainG p-2"></div>
+            <div id="showName">Show 3
+              <a href="https://placeholder.com"><img src="https://via.placeholder.com/150"></a>
+              <button id="thumbsUp"><i class="far fa-thumbs-up"></i></button>
+              <button id="thumbsDown" style="margin-left: 7px;"><i class="far fa-thumbs-down"></i> </button> </div>
+
+            <div id="fountainG_4" class="fountainG p-2"></div>
+            <div id="showName">Show 4
+              <a href="https://placeholder.com"><img src="https://via.placeholder.com/150"></a>
+              <button id="thumbsUp"><i class="far fa-thumbs-up"></i></button>
+              <button id="thumbsDown" style="margin-left: 7px;"><i class="far fa-thumbs-down"></i> </button> </div>
+
+            <div id="fountainG_5" class="fountainG p-2"></div>
+            <div id="showName">Show 5
+              <a href="https://placeholder.com"><img src="https://via.placeholder.com/150"></a>
+              <button id="thumbsUp"><i class="far fa-thumbs-up"></i></button>
+              <button id="thumbsDown" style="margin-left: 7px;"><i class="far fa-thumbs-down"></i> </button> </div>
+
+            <div id="fountainG_6" class="fountainG p-2"></div>
+            <div id="showName">Show 6
+              <a href="https://placeholder.com"><img src="https://via.placeholder.com/150"></a>
+              <button id="thumbsUp"><i class="far fa-thumbs-up"></i></button>
+              <button id="thumbsDown" style="margin-left: 7px;"><i class="far fa-thumbs-down"></i> </button> </div>
+
+            <div id="fountainG_7" class="fountainG p-2"></div>
+            <div id="showName">Show 7
+              <a href="https://placeholder.com"><img src="https://via.placeholder.com/150"></a>
+              <button id="thumbsUp"><i class="far fa-thumbs-up"></i></button>
+              <button id="thumbsDown" style="margin-left: 7px;"><i class="far fa-thumbs-down"></i> </button> </div>
+
+            <div id="fountainG_8" class="fountainG p-2"></div>
+            <div id="showName">Show 8
+              <a href="https://placeholder.com"><img src="https://via.placeholder.com/150"></a>
+              <button id="thumbsUp"><i class="far fa-thumbs-up"></i></button>
+              <button id="thumbsDown" style="margin-left: 7px;"><i class="far fa-thumbs-down"></i> </button> </div>
+
+            <div id="fountainG_9" class="fountainG p-2"></div>
+            <div id="showName">Show 9
+              <a href="https://placeholder.com"><img src="https://via.placeholder.com/150"></a>
+              <button id="thumbsUp"><i class="far fa-thumbs-up"></i></button>
+              <button id="thumbsDown" style="margin-left: 7px;"><i class="far fa-thumbs-down"></i> </button> </div>
+
+            <div id="fountainG_10" class="fountainG p-2"></div>
+            <div id="showName">Show 10
+              <a href="https://placeholder.com"><img src="https://via.placeholder.com/150"></a>
+              <button id="thumbsUp"><i class="far fa-thumbs-up"></i></button>
+              <button id="thumbsDown" style="margin-left: 7px;"><i class="far fa-thumbs-down"></i> </button> </div>
+
+
+          </div>
+        </div>
+      </div>
+  
+  </section>
+
+  </div>
+
+  <!-- FOOTER -->
   <footer class="w-full text-center font-semibold text-xl tracking-tight border-t border-grey p-4 mr-6">
     <div>
-      <a href="" class="btn btn-primary px-1">Miguel</a>
-      <a href="https://warsurge.github.io/homework-2/" class="btn btn-success px-1">Surge</a>
-      <a href="" class="btn btn-info px-1">Robert</a>
-      <a href="" class="btn btn-info px-1">Jason</a>
-      <a href="" class="btn btn-info px-1">Kyle</a>
+      <a href="" class="btn btn-primary px-1 hover:text-red-500">Miguel</a>
+      <a href="https://warsurge.github.io/homework-2/" class="btn btn-success px-1 hover:text-red-500">Surge</a>
+      <a href="" class="btn btn-info px-1 hover:text-red-500">Robert</a>
+      <a href="" class="btn btn-info px-1 hover:text-red-500">Jason</a>
+      <a href="" class="btn btn-info px-1 hover:text-red-500">Kyle</a>
     </div>
 
   </footer>
@@ -194,13 +491,16 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script type="text/javascript" src="js/members.js"></script>
-<script>
-  document.getElementById('nav-toggle').onclick = function () {
-    document.getElementById("nav-content").classList.toggle("hidden")
-  }
-</script>
+
 
 <!-- <div class ="box">
   <input class="rounded h-8 pr-5 text-black font-semibold" type="text" id = "search" placeholder="Search for Shows">
   <button id= "showSearch"><i class="fas fa-search"></i></button>
 </div> -->
+
+<!-- upVote Feature-----------------------------------
+            <div id="showName">Show 1
+              <button id="thumbsUp"><i class="far fa-thumbs-up"></i></button>
+              <button id="thumbsDown" style="margin-left: 7px;"><i class="far fa-thumbs-down"></i> </button> </div>
+          </div> 
+           ----------------------------------------------------------------- -->

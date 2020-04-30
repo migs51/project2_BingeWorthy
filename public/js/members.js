@@ -22,6 +22,13 @@ $(document).ready(function() {
   var poster8 = $("#poster8");
   var showName9 = $("#showName9");
   var poster9 = $("#poster9");
+  var landingpage = $("#landing-page");
+  var netflix = $("#netflixPage");
+  var hulu = $("#huluPage");
+  var amazon = $("#amazonPage");
+  var hbo = $("#hboPage");
+  // var showName = $("#showName");
+  var userName = $("#userEmail");
 
   // This file just does a GET request to figure out which user is logged in
   // and updates the HTML on the page
@@ -132,4 +139,48 @@ $(document).ready(function() {
       poster9.html(`<img src = ${data[8].results_artwork_208x117}>`);
     });
   });
+
+  //For switching pages.
+  // function switchPages(){}
+
+  // $("#homepage").on("click", function() {
+  //   console.log("ive been clicked")
+  //   landingpage.removeClass("hidden", function() {
+  //     netflix.addClass("hidden");
+  //   });
+  // });
+
+  $("#homepage").on("click", function() {
+    netflix.toggle("hidden", function() {
+      landingpage.toggle("hidden");
+    });
+  });
+
+  $("#netflix-btn").on("click", function() {
+    landingpage.toggle("hidden", function() {
+      netflix.toggle("hidden");
+    });
+  });
+
+  $("#hulu-btn").on("click", function() {
+    landingpage.toggle("hidden", function() {
+      hulu.toggle("hidden");
+    });
+  });
+
+  $("#amazon-btn").on("click", function() {
+    landingpage.toggle("hidden", function() {
+      amazon.toggle("hidden");
+    });
+  });
+
+  $("#hbo-btn").on("click", function() {
+    landingpage.toggle("hidden", function() {
+      hbo.toggle("hidden");
+    });
+  });
+  // For toggle the menu button
+  document.getElementById("nav-toggle").onclick = function() {
+    document.getElementById("nav-content").classList.toggle("hidden");
+  };
 });
