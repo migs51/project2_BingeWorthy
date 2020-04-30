@@ -4,6 +4,9 @@
       "commonjs": true,
       "node": true
     },
+    "parserOptions": {
+        "ecmaVersion": 2019
+    },
     "extends": "prettier",
     "plugins": ["prettier"],
     "rules": {
@@ -19,7 +22,7 @@
       "no-empty-function": "error",
       "no-multi-spaces": "error",
       "no-unused-vars": "error",
-      "camelcase": "error",
+      // "camelcase": "error",
       "indent": ["error", 2],
       "quotes": ["error", "double"],
       "semi": ["error", "always"],
