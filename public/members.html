@@ -8,13 +8,14 @@
   <script src="https://kit.fontawesome.com/8a7c5c0e05.js" crossorigin="anonymous"></script>
   <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
   <script src="https://kit.fontawesome.com/b70d052965.js" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <link href="stylesheets/style.css" rel="stylesheet">
 </head>
 
 <body>
   <nav class="flex items-center justify-between flex-wrap bg-teal-500 p-6">
     <button id="homepage"
-      class="font-semibold text-xl tracking-tight hover:text-black flex items-center flex-shrink-0 text-white mr-6 cursor-pointer">
+      class="font-semibold text-xl tracking-tight hover:text-black flex items-center flex-shrink-0 text-white mr-6 cursor-pointer link link-1" onclick="$('.tog').toggle()">
       BINGE WORTHY
     </button>
     <div class="block lg:hidden">
@@ -28,16 +29,16 @@
     </div>
     <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block pt-6 lg:pt-0" id="nav-content">
       <div class="text-md lg:flex-grow">
-        <button id="hulu-btn" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-black mr-4">
+        <button id="hulu-btn" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-black mr-4 link link-2" onclick="$('.tog').toggle()">
           Hulu
         </button>
-          <button id="netflix-btn" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-black mr-4">
+          <button id="netflix-btn" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-black mr-4 link link-3" onclick="$('.tog').toggle()">
             NetFlix
           </button>
-          <button id="amazon-btn" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-black">
+          <button id="amazon-btn" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-black link link-4" onclick="$('.tog').toggle()">
             Amazon
           </button>
-          <button id="hbo-btn" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-black">
+          <button id="hbo-btn" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-black link link-5" onclick="$('.tog').toggle()">
             HBO
           </button>
       </div>
@@ -49,7 +50,7 @@
     </div>
   </nav>
   <!-- Body -->
-  <div id="landing-page">
+  <div id="landing-page" class="content active">
     <section id="topShows">
       <h2 class="bg-grey-900 text-teal-200 text-2xl font-bold p-3 text-center">
         Binge Worthy Shows
@@ -141,7 +142,7 @@
   </div>
 
   <!-- NETFLIX PAGE -->
-  <div id="netflixPage" class="hidden">
+  <div id="netflixPage" class= "content">
     <section>
       <div id="netflixBanner" class="relative bg-grey-900 text-teal-200 p-0 pb-5 flex content-end overflow-hidden">
         <div class="relative flex-shrink-0 mx-2" style="height:200px!important; width:200px!important;">
@@ -226,7 +227,7 @@
   </div>
 
   <!-- HULU PAGE -->
-  <div id="huluPage" class="hidden">
+  <div id="huluPage" class= "content">
     <section>
       <div id="huluBanner" class="relative bg-grey-900 text-teal-200 p-0 pb-5 flex content-end overflow-hidden">
         <div class="relative flex-shrink-0 mx-2" style="height:200px!important; width:200px!important;">
@@ -310,13 +311,13 @@
 
   </div>
   <!-- AMAZON PAGE -->
-  <div id="amazonPage" class="hidden">
+  <div id="amazonPage" class="content">
     <section>
       <div id="amazonBanner" class="relative bg-grey-900 text-teal-200 p-0 pb-5 flex content-end overflow-hidden">
         <div class="relative flex-shrink-0 mx-2" style="height:200px!important; width:200px!important;">
           <div class="absolute rounded-full h-full w-full overflow-hidden shadow-lg" style="bottom:-40px;">
             <img id="Amazon" class="h-full w-full"
-              src="amazon-logo-transparent.png" , alt="NetFlix Logo">
+              src="amazon-logo-transparent.png" , alt="Amazon Logo">
           </div>
         </div>
         <div class="">
@@ -395,7 +396,7 @@
   </div>
   
   <!-- HBO -->
-  <div id="hboPage" class="hidden">
+  <div id="hboPage" class="content">
     <section>
       <div id="hboBanner" class="relative bg-grey-900 text-teal-200 p-0 pb-5 flex content-end overflow-hidden">
         <div class="relative flex-shrink-0 mx-2" style="height:200px!important; width:200px!important;">
