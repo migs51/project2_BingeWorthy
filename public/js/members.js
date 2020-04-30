@@ -1,7 +1,7 @@
 $(document).ready(function() {
   //global variables
   // var thumbsUp = $("#thumbsUp");
-  var thumbsDown = $("#thumbsDown");
+  // var thumbsDown = $("#thumbsDown");
   var userName = $(".member-name");
   var netflix = $("#netflix-btn");
   var showName1 = $("#showName1");
@@ -55,10 +55,9 @@ $(document).ready(function() {
       shows: showName1.html(),
       bingeable: false
     };
-  
+
     downVote(userDownVote);
   }
-
 
   //ajax request to display user Email on DOM
   $.get("/api/user_data").then(function(data) {
