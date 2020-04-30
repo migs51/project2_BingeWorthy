@@ -12,7 +12,7 @@ CREATE TABLE shows (
   genre VARCHAR(100) NOT NULL,
   release_date INT NOT NULL,
   streaming_service VARCHAR(100) NOT NULL,
-  binge_rank INT NOT NULL,
+  binge_rank INT NOT NULL
 );
 
 --CREATE TABLE ratings (
