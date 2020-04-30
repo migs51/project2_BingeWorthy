@@ -12,13 +12,23 @@ module.exports = function(app) {
 
   //Route for displaying top 10 shows in our database -JS
   app.get("/api/shows/topshows", function(req, res) {
-    db.Show.findAll({
+    db.allShows.findAll({
       limit: 10,
-      order: ["bingeRank", "DESC"]
+      // order: ["bingeRank", "DESC"]
     }).then(function(results) {
       res.json(results);
     });
   });
+
+    //Route for displaying top 10 NETFLIX shows in our database -MM
+    app.get("/api/shows/netflixes", function(req, res) {
+      db.netflixes.findAll({
+        limit: 10,
+        // order: ["bingeRank", "DESC"]
+      }).then(function(results) {
+        res.json(results);
+      });
+    });
 
   //Route for displaying shows by streaming platform -JS
   app.get("/api/shows/streamingService/:streamingService", function(req, res) {
