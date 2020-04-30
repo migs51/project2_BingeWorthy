@@ -6,6 +6,7 @@ $(document).ready(function () {
   var netflix = $("#netflixPage");
   var hulu = $("#huluPage");
   var amazon = $("#amazonPage");
+  var hbo = $("#hboPage")
   // var showName = $("#showName");
   var userName = $("#userEmail");
 
@@ -70,6 +71,13 @@ $(document).ready(function () {
   // function switchPages(){}
 
 
+  // $("#homepage").on("click", function() {
+  //   console.log("ive been clicked")
+  //   landingpage.removeClass("hidden", function() {
+  //     netflix.addClass("hidden");
+  //   });
+  // });
+
   $("#homepage").on("click", function() {
     netflix.toggle("hidden", function() {
       landingpage.toggle("hidden");
@@ -82,20 +90,26 @@ $(document).ready(function () {
     });
   });
 
-  // $("#hulu-btn").on("click", function() {
-  //   landingpage.toggle("hidden", function() {
-  //     hulu.toggle("hidden");
-  //   });
-  // });
-
-  // $("#amazon-btn").on("click", function() {
-  //   landingpage.toggle("hidden", function() {
-  //     amazon.toggle("hidden");
-  //   });
-  // });
-  
-  // For toggle the menu button
-  $("#nav-toggle").on("click", function () {
-    $("#nav-content").toggle("hidden")
+  $("#hulu-btn").on("click", function() {
+    landingpage.toggle("hidden", function() {
+      hulu.toggle("hidden");
+    });
   });
+
+  $("#amazon-btn").on("click", function() {
+    landingpage.toggle("hidden", function() {
+      amazon.toggle("hidden");
+    });
+  });
+
+  $("#hbo-btn").on("click", function() {
+    landingpage.toggle("hidden", function() {
+      hbo.toggle("hidden");
+    });
+  });
+  // For toggle the menu button
+  document.getElementById('nav-toggle').onclick = function () {
+    document.getElementById("nav-content").classList.toggle("hidden")
+  }
+  
 });
