@@ -140,75 +140,51 @@ $(document).ready(function() {
   });
 
   //For switching pages.
-  // $(".button").click(function (e) {
-  //   e.preventDefault();
-  //   $(".content").removeClass("active");
-  //   var content_id = $(this).attr("id");
-  //   $(content_id).addClass("active");
-// });
-//   function switchPages(page) {
-//     $('.page-section').removeClass("active");
-//     page.addClass("active");
-// }
 
-//   $(".link").click(function() {
-//     var pageNum = parseInt(
-//       $(this)
-//         .attr('class')
-//         .match(/\d+/g)[0]
-//     );
-//     console.log(pageNum)
-//     switchPages($(".page-" + pageNum));
-//   });
+  $("#homepage").on("click", function() {
+    console.log("ive been clicked");
+    netflix.addClass("hidden");
+    hulu.addClass("hidden");
+    amazon.addClass("hidden");
+    hbo.addClass("hidden");
+    landingpage.removeClass("hidden");
+  });
+  $("#netflix-btn").on("click", function() {
+    console.log("ive been clicked");
+    landingpage.addClass("hidden");
+    hulu.addClass("hidden");
+    amazon.addClass("hidden");
+    hbo.addClass("hidden");
+    netflix.removeClass("hidden");
+  });
 
- // function switchPages(){}
+  $("#hulu-btn").on("click", function() {
+    console.log("ive been clicked");
+    netflix.addClass("hidden");
+    landingpage.addClass("hidden");
+    amazon.addClass("hidden");
+    hbo.addClass("hidden");
+    hulu.removeClass("hidden");
+  });
 
-  // $("#homepage").on("click", function() {
-  //   console.log("ive been clicked")
-  //   landingpage.removeClass("hidden", function() {
-  //     netflix.addClass("hidden");
-  //   });
-  // });
+  $("#amazon-btn").on("click", function() {
+    console.log("ive been clicked");
+    netflix.addClass("hidden");
+    hulu.addClass("hidden");
+    landingpage.addClass("hidden");
+    hbo.addClass("hidden");
+    amazon.removeClass("hidden");
+  });
 
-  // $("#homepage").on("click", function() {
-  //   if (landingpage.hasClass("hidden")) {
-  //     landingpage.toggle("hidden");
-  //   }
-  // });
-//   $("#homepage").on("click", function () {
-//     console.log("ive been clicked")
-//     netflix.addClass("hidden", function () {
-//         landingPage.removeClass("hidden");
-//     })
-// });
-  // $("#homepage").on("click", function() {
-  //   netflix.toggle("hidden", function() {
-  //     landingpage.toggle("hidden");
-  //   });
-  // });
-  // $("#netflix-btn").on("click", function() {
-  //   landingpage.toggle("hidden", function() {
-  //     netflix.toggle("hidden");
-  //   });
-  // });
+  $("#hbo-btn").on("click", function() {
+    console.log("ive been clicked");
+    netflix.addClass("hidden");
+    hulu.addClass("hidden");
+    amazon.addClass("hidden");
+    landingpage.addClass("hidden");
+    hbo.removeClass("hidden");
+  });
 
-  // $("#hulu-btn").on("click", function() {
-  //   landingpage.toggle("hidden", function() {
-  //     hulu.toggle("hidden");
-  //   });
-  // });
-
-  // $("#amazon-btn").on("click", function() {
-  //   landingpage.toggle("hidden", function() {
-  //     amazon.toggle("hidden");
-  //   });
-  // });
-
-  // $("#hbo-btn").on("click", function() {
-  //   landingpage.toggle("hidden", function() {
-  //     hbo.toggle("hidden");
-  //   });
-  // });
   // For toggle the menu button
   document.getElementById("nav-toggle").onclick = function() {
     document.getElementById("nav-content").classList.toggle("hidden");
