@@ -140,44 +140,51 @@ $(document).ready(function() {
   });
 
   //For switching pages.
-  // function switchPages(){}
-
-  // $("#homepage").on("click", function() {
-  //   console.log("ive been clicked")
-  //   landingpage.removeClass("hidden", function() {
-  //     netflix.addClass("hidden");
-  //   });
-  // });
 
   $("#homepage").on("click", function() {
-    netflix.toggle("hidden", function() {
-      landingpage.toggle("hidden");
-    });
+    console.log("ive been clicked");
+    netflix.addClass("hidden");
+    hulu.addClass("hidden");
+    amazon.addClass("hidden");
+    hbo.addClass("hidden");
+    landingpage.removeClass("hidden");
   });
-
   $("#netflix-btn").on("click", function() {
-    landingpage.toggle("hidden", function() {
-      netflix.toggle("hidden");
-    });
+    console.log("ive been clicked");
+    landingpage.addClass("hidden");
+    hulu.addClass("hidden");
+    amazon.addClass("hidden");
+    hbo.addClass("hidden");
+    netflix.removeClass("hidden");
   });
 
   $("#hulu-btn").on("click", function() {
-    landingpage.toggle("hidden", function() {
-      hulu.toggle("hidden");
-    });
+    console.log("ive been clicked");
+    netflix.addClass("hidden");
+    landingpage.addClass("hidden");
+    amazon.addClass("hidden");
+    hbo.addClass("hidden");
+    hulu.removeClass("hidden");
   });
 
   $("#amazon-btn").on("click", function() {
-    landingpage.toggle("hidden", function() {
-      amazon.toggle("hidden");
-    });
+    console.log("ive been clicked");
+    netflix.addClass("hidden");
+    hulu.addClass("hidden");
+    landingpage.addClass("hidden");
+    hbo.addClass("hidden");
+    amazon.removeClass("hidden");
   });
 
   $("#hbo-btn").on("click", function() {
-    landingpage.toggle("hidden", function() {
-      hbo.toggle("hidden");
-    });
+    console.log("ive been clicked");
+    netflix.addClass("hidden");
+    hulu.addClass("hidden");
+    amazon.addClass("hidden");
+    landingpage.addClass("hidden");
+    hbo.removeClass("hidden");
   });
+
   // For toggle the menu button
   document.getElementById("nav-toggle").onclick = function() {
     document.getElementById("nav-content").classList.toggle("hidden");

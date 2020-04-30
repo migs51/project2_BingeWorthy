@@ -37,9 +37,6 @@ margin-right: auto;
   width: 75%;
 }
 
-/* .collapsed{
-  height:0px;
-  overflow:hidden;
+/* .content:not(.active){
+  display: none;
 } */
-
-
