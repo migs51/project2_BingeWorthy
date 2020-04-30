@@ -27,16 +27,16 @@
     </div>
     <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block pt-6 lg:pt-0" id="nav-content">
       <div class="text-md lg:flex-grow">
-        <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-black mr-4">
+        <button id="hulu-btn" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-black mr-4">
           Hulu
         </a>
         <button id="netflix-btn"
           class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-black mr-4">
           NetFlix
         </button>
-        <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-black">
+        <button id= "amazon-btn" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-black">
           Amazon
-        </a>
+        </button>
       </div>
       <div>
         <a href="/logout"
@@ -46,7 +46,7 @@
     </div>
   </nav>
   <!-- Body -->
-  <div id="landing-page">
+  <div id="landing-page" class= "visible">
     <section id="topShows">
       <h2 class="bg-green-800 text-teal-200 text-2xl font-bold p-3 text-center">
         Binge Worthy Shows
@@ -134,8 +134,8 @@
     </div>
   </div>
 
-
-    <div id="netflixPage" class="collapsed">
+<!-- NETFLIX PAGE -->
+    <div id="netflixPage" class="hidden">
       <section>
         <div id="netflixBanner" class="relative bg-teal-900 text-green-100 p-0 pb-5 flex content-end overflow-hidden">
           <div class="relative flex-shrink-0 mx-2" style="height:200px!important; width:200px!important;">
@@ -155,6 +155,46 @@
 
     </div>
 
+    <!-- HULU PAGE -->
+    <div id="huluPage" class="hidden">
+      <section>
+        <div id="huluBanner" class="relative bg-teal-900 text-green-100 p-0 pb-5 flex content-end overflow-hidden">
+          <div class="relative flex-shrink-0 mx-2" style="height:200px!important; width:200px!important;">
+            <div class="absolute rounded-full h-full w-full overflow-hidden shadow-lg" style="bottom:-40px;">
+              <img id="HULU" class="h-full w-full" src="C:\Users\13044\Desktop\project2_BingeWorthy\netflix logo.png"
+                , alt="HULU Logo">
+            </div>
+          </div>
+          <div class="">
+            <h2 id="serviceBannerName" class="text-4xl font-bold ">
+              HULU
+            </h2>
+            <div id="genreWell" class=""></div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+    <!-- AMAZON PAGE -->
+    <div id="amazonPage" class="hidden">
+      <section>
+        <div id="amazonBanner" class="relative bg-teal-900 text-green-100 p-0 pb-5 flex content-end overflow-hidden">
+          <div class="relative flex-shrink-0 mx-2" style="height:200px!important; width:200px!important;">
+            <div class="absolute rounded-full h-full w-full overflow-hidden shadow-lg" style="bottom:-40px;">
+              <img id="Amazon" class="h-full w-full" src="C:\Users\13044\Desktop\project2_BingeWorthy\netflix logo.png"
+                , alt="NetFlix Logo">
+            </div>
+          </div>
+          <div class="">
+            <h2 id="serviceBannerName" class="text-4xl font-bold ">
+              AMAZON
+            </h2>
+            <div id="genreWell" class=""></div>
+          </div>
+        </div>
+      </section>
+
+    </div>
 
 
 
@@ -177,11 +217,7 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script type="text/javascript" src="js/members.js"></script>
-<script>
-  document.getElementById('nav-toggle').onclick = function () {
-    document.getElementById("nav-content").classList.toggle("hidden")
-  }
-</script>
+
 
 <!-- <div class ="box">
   <input class="rounded h-8 pr-5 text-black font-semibold" type="text" id = "search" placeholder="Search for Shows">
