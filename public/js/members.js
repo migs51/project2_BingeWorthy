@@ -1,8 +1,8 @@
 $(document).ready(function() {
   //global variables
   // var thumbsUp = $("#thumbsUp");
-  var thumbsDown = $("#thumbsDown");
-  // var userName = $("#userEmail");
+  // var thumbsDown = $("#thumbsDown");
+  var userName = $(".member-name");
   var netflix = $("#netflix-btn");
   var showName1 = $("#showName1");
   var poster1 = $("#poster1");
@@ -22,6 +22,8 @@ $(document).ready(function() {
   var poster8 = $("#poster8");
   var showName9 = $("#showName9");
   var poster9 = $("#poster9");
+  var showName10 = $("#showName10");
+  var poster10 = $("#poster10");
   var landingpage = $("#landing-page");
   var netflix = $("#netflixPage");
   var hulu = $("#huluPage");
@@ -32,60 +34,49 @@ $(document).ready(function() {
   // This file just does a GET request to figure out which user is logged in
   // and updates the HTML on the page
 
-  console.log(showName1.html());
   $(document).on("click", "button#thumbsUp", thumbsUpFunction);
-  //capture email address of user in variable
+  $(document).on("click", "button#thumbsDown", thumbsDownFunction);
+
   function thumbsUpFunction() {
+    var userUpVote = {
+      users: userName.html(),
+      shows: showName1.html(),
+      bingeable: true
+    };
     console.log(showName1.html());
-    // $.get("/api/user_data", function(data) {
-    //   var userUpVote = {
-    //     users: data.email,
-    //     shows: showName1.html(),
-    //     bingeable: true
-    //   };
-    //     thumbsUp.on("click", function() {
-    //       upVote(userUpVote);
-    //       console.log("button clicked");
-    //       // thumbsUp.toggle();
-    //     });
-    //  });
+    console.log(userName.html());
+    console.log(userUpVote);
+    upVote(userUpVote);
   }
 
-  // thumbsUpFunction();
+  function thumbsDownFunction() {
+    var userDownVote = {
+      users: userName.html(),
+      shows: showName1.html(),
+      bingeable: false
+    };
 
+    downVote(userDownVote);
+  }
+
+  //ajax request to display user Email on DOM
   $.get("/api/user_data").then(function(data) {
     $(".member-name").text(data.email);
   });
 
-  var userDownVote = {
-    users: "bob",
-    shows: "Friends",
-    bingeable: false
-  };
-
-  // function upVote(post) {
-  //   $.post("/api/shows/recommendations", post, function() {
-  //     window.location.href = "/members";
-  //     // thumbsUp.attr("disabled", true);
-  //   });
-  // }
+  //upVote and downVote POST requests to express and our DB
+  function upVote(post) {
+    $.post("/api/shows/recommendations", post, function() {
+      window.location.href = "/members";
+      // thumbsUp.attr("disabled", true);
+    });
+  }
 
   function downVote(post) {
     $.post("/api/shows/recommendations", post, function() {
       window.location.href = "/members";
     });
   }
-
-  //click handlers for upVotes and downVotes
-  //need to Put request on the condition that the user has already clicked the button
-  //potentially get rid of the thumbsDown for MVP
-
-  thumbsDown.click(function(e) {
-    e.preventDefault();
-    downVote(userDownVote);
-    console.log("It worked");
-    // thumbsDown.toggle();
-  });
 
   //ajax get request to grab top shows
   function allShows() {
@@ -108,6 +99,8 @@ $(document).ready(function() {
       poster8.html(`<img src = ${data[7].results_artwork_208x117}>`);
       showName9.text(data[8].results_title);
       poster9.html(`<img src = ${data[8].results_artwork_208x117}>`);
+      showName10.text(data[9].results_title);
+      poster10.html(`<img src = ${data[9].results_artwork_208x117}>`);
     });
   }
 
@@ -136,48 +129,57 @@ $(document).ready(function() {
       poster8.html(`<img src = ${data[7].results_artwork_208x117}>`);
       showName9.text(data[8].results_title);
       poster9.html(`<img src = ${data[8].results_artwork_208x117}>`);
+      showName10.text(data[9].results_title);
+      poster10.html(`<img src = ${data[9].results_artwork_208x117}>`);
     });
   });
 
   //For switching pages.
-  // function switchPages(){}
-
-  // $("#homepage").on("click", function() {
-  //   console.log("ive been clicked")
-  //   landingpage.removeClass("hidden", function() {
-  //     netflix.addClass("hidden");
-  //   });
-  // });
 
   $("#homepage").on("click", function() {
-    netflix.toggle("hidden", function() {
-      landingpage.toggle("hidden");
-    });
+    console.log("ive been clicked");
+    netflix.addClass("hidden");
+    hulu.addClass("hidden");
+    amazon.addClass("hidden");
+    hbo.addClass("hidden");
+    landingpage.removeClass("hidden");
   });
-
   $("#netflix-btn").on("click", function() {
-    landingpage.toggle("hidden", function() {
-      netflix.toggle("hidden");
-    });
+    console.log("ive been clicked");
+    landingpage.addClass("hidden");
+    hulu.addClass("hidden");
+    amazon.addClass("hidden");
+    hbo.addClass("hidden");
+    netflix.removeClass("hidden");
   });
 
   $("#hulu-btn").on("click", function() {
-    landingpage.toggle("hidden", function() {
-      hulu.toggle("hidden");
-    });
+    console.log("ive been clicked");
+    netflix.addClass("hidden");
+    landingpage.addClass("hidden");
+    amazon.addClass("hidden");
+    hbo.addClass("hidden");
+    hulu.removeClass("hidden");
   });
 
   $("#amazon-btn").on("click", function() {
-    landingpage.toggle("hidden", function() {
-      amazon.toggle("hidden");
-    });
+    console.log("ive been clicked");
+    netflix.addClass("hidden");
+    hulu.addClass("hidden");
+    landingpage.addClass("hidden");
+    hbo.addClass("hidden");
+    amazon.removeClass("hidden");
   });
 
   $("#hbo-btn").on("click", function() {
-    landingpage.toggle("hidden", function() {
-      hbo.toggle("hidden");
-    });
+    console.log("ive been clicked");
+    netflix.addClass("hidden");
+    hulu.addClass("hidden");
+    amazon.addClass("hidden");
+    landingpage.addClass("hidden");
+    hbo.removeClass("hidden");
   });
+
   // For toggle the menu button
   document.getElementById("nav-toggle").onclick = function() {
     document.getElementById("nav-content").classList.toggle("hidden");
