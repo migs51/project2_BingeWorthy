@@ -456,7 +456,7 @@ $(document).ready(function() {
     hbo.addClass("hidden");
     landingpage.removeClass("hidden");
   });
-  
+
   // $("#netflix-btn").on("click", function() {
   //   console.log("ive been clicked");
   //   landingpage.addClass("hidden");
