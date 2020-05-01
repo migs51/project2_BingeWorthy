@@ -40,8 +40,10 @@ $(document).ready(function() {
 
 
   //click handler showName1
+  console.log("here");
   $(document).on("click", "button#thumbsUp", thumbsUpFunction);
   $(document).on("click", "button#thumbsDown", thumbsDownFunction);
+  console.log("there");
   //click handler showName2
   $(document).on("click", "button#thumbsUp2", thumbsUpFunction2);
   $(document).on("click", "button#thumbsDown2", thumbsDownFunction2);
@@ -80,6 +82,7 @@ console.log(showName10.html());
     
 //ShowName 1 Like and Dislike Button functions
   function thumbsUpFunction(event) {
+    console.log("function here");
     event.preventDefault();
     var userUpVote = {
       users: userName.html(),
@@ -305,14 +308,14 @@ function thumbsDownFunction10(event) {
   //upVote and downVote POST requests to express and our DB
   function upVote(post) {
     $.post("/api/shows/recommendations", post, function() {
-      window.location.href = "/members";
-      // thumbsUp.attr("disabled", true);
+      
+
     });
   }
 
   function downVote(post) {
     $.post("/api/shows/recommendations", post, function() {
-      window.location.href = "/members";
+      
     });
   }
 
