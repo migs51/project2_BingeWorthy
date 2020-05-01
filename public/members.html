@@ -34,13 +34,13 @@
           <button id="netflix-btn" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-black mr-4">
             NetFlix
           </button>
-          <button id="amazon-btn" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-black">
+          <button id="amazon-btn" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-black mr-4">
             Amazon
           </button>
-          <button id="hbo-btn" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-black">
+          <button id="hbo-btn" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-black mr-4">
             HBO
           </button>
-          <a href="/members" id="hbo-btn" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-black">
+          <a href="/members" id="hbo-btn" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-black mr-4">
             Top Shows
           </a>
       </div>
@@ -55,12 +55,21 @@
 
   <div class ="box">
     <input class="rounded h-8 pr-5 text-black font-semibold" type="text" id = "search" placeholder="Search for Shows">
-    <button id= "showSearch"><i class="fas fa-search"></i></button>
+    <button id= "showSearch"><i class="fas fa-search hover:text-red-500"></i></button>
   </div>
   <div id="landing-page">
     <section id="topShows">
       <h2 class="bg-grey-900 text-teal-200 text-2xl font-bold p-3 text-center">
         Binge Worthy Shows
+      </h2>
+      <div id=netflixTitle class="bg-grey-900 text-teal-200 text-2xl font-bold p-3 text-center hidden">
+        NetFlix
+      </div>
+      <h2 class="bg-grey-900 text-teal-200 text-2xl font-bold p-3 text-center hidden">
+        Amazon
+      </h2>
+      <h2 class="bg-grey-900 text-teal-200 text-2xl font-bold p-3 text-center hidden">
+        HBO
       </h2>
     </section>
     <div class="max-w-sm rounded overflow-hidden shadow-lg"></div>
@@ -79,73 +88,72 @@
       <div>
         <div id="showName1"> Show 1</div>
         <div id="poster1"></div>
-        <button id="thumbsUp"><i class="far fa-thumbs-up"></i></button>
-        <button id="thumbsDown" style="margin-left: 7px;"><i class="far fa-thumbs-down"></i> </button> </div>
+        <button id="thumbsUp"><i class="far fa-thumbs-up hover:text-red-500"></i></button>
+        <button id="thumbsDown" style="margin-left: 7px "><i class="far fa-thumbs-down hover:text-red-500"></i> </button> </div>
     </div>
     <div id="fountainG_2" class="fountainG p-2"></div>
     <div id="showName">
       <div id="showName2"> Show 2</div>
         <div id="poster2"></div>
-      <button id="thumbsUp2"><i class="far fa-thumbs-up"></i></button>
-      <button id="thumbsDown2" style="margin-left: 7px;"><i class="far fa-thumbs-down"></i> </button> </div>
+      <button id="thumbsUp2"><i class="far fa-thumbs-up hover:text-red-500"></i></button>
+      <button id="thumbsDown2" style="margin-left: 7px;"><i class="far fa-thumbs-down hover:text-red-500"></i> </button> </div>
 
     <div id="fountainG_3" class="fountainG p-2"></div>
     <div id="showName">
       <div id="showName3"> Show 3</div>
         <div id="poster3"></div>
-      <button id="thumbsUp3"><i class="far fa-thumbs-up"></i></button>
-      <button id="thumbsDown3" style="margin-left: 7px;"><i class="far fa-thumbs-down"></i> </button> </div>
+      <button id="thumbsUp3"><i class="far fa-thumbs-up hover:text-red-500"></i></button>
+      <button id="thumbsDown3" style="margin-left: 7px;"><i class="far fa-thumbs-down hover:text-red-500"></i> </button> </div>
 
     <div id="fountainG_4" class="fountainG p-2"></div>
     <div id="showName">
       <div id="showName4"> Show 4</div>
       <div id="poster4"></div>
-      <button id="thumbsUp4"><i class="far fa-thumbs-up"></i></button>
-      <button id="thumbsDown4" style="margin-left: 7px;"><i class="far fa-thumbs-down"></i> </button> </div>
+      <button id="thumbsUp4"><i class="far fa-thumbs-up hover:text-red-500"></i></button>
+      <button id="thumbsDown4" style="margin-left: 7px;"><i class="far fa-thumbs-down hover:text-red-500"></i> </button> </div>
 
     <div id="fountainG_5" class="fountainG p-2"></div>
     <div id="showName">
       <div id="showName5"> Show 5</div>
       <div id="poster5"></div>
-      <button id="thumbsUp5"><i class="far fa-thumbs-up"></i></button>
-      <button id="thumbsDown5" style="margin-left: 7px;"><i class="far fa-thumbs-down"></i> </button> </div>
+      <button id="thumbsUp5"><i class="far fa-thumbs-up hover:text-red-500"></i></button>
+      <button id="thumbsDown5" style="margin-left: 7px;"><i class="far fa-thumbs-down hover:text-red-500"></i> </button> </div>
 
     <div id="fountainG_6" class="fountainG p-2"></div>
     <div id="showName">
       <div id="showName6"> Show 6</div>
       <div id="poster6"></div>
-      <button id="thumbsUp6"><i class="far fa-thumbs-up"></i></button>
-      <button id="thumbsDown6" style="margin-left: 7px;"><i class="far fa-thumbs-down"></i> </button> </div>
+      <button id="thumbsUp6"><i class="far fa-thumbs-up hover:text-red-500"></i></button>
+      <button id="thumbsDown6" style="margin-left: 7px;"><i class="far fa-thumbs-down hover:text-red-500"></i> </button> </div>
 
     <div id="fountainG_7" class="fountainG p-2"></div>
     <div id="showName">
       <div id="showName7"> Show 7</div>
       <div id="poster7"></div>
-      <button id="thumbsUp7"><i class="far fa-thumbs-up"></i></button>
-      <button id="thumbsDown7" style="margin-left: 7px;"><i class="far fa-thumbs-down"></i> </button> 
+      <button id="thumbsUp7"><i class="far fa-thumbs-up hover:text-red-500"></i></button>
+      <button id="thumbsDown7" style="margin-left: 7px;"><i class="far fa-thumbs-down hover:text-red-500"></i> </button> 
     </div>
 
     <div id="fountainG_8" class="fountainG p-2"></div>
     <div id="showName">
       <div id="showName8"> Show 8</div>
       <div id="poster8"></div>
-      <button id="thumbsUp8"><i class="far fa-thumbs-up"></i></button>
-      <button id="thumbsDown8" style="margin-left: 7px;"><i class="far fa-thumbs-down"></i> </button> 
+      <button id="thumbsUp8"><i class="far fa-thumbs-up hover:text-red-500"></i></button>
+      <button id="thumbsDown8" style="margin-left: 7px;"><i class="far fa-thumbs-down hover:text-red-500"></i> </button> 
     </div>
-
 
     <div id="showName">
       <div id="showName9"> Show 9</div>
       <div id="poster9"></div>
-      <button id="thumbsUp9"><i class="far fa-thumbs-up"></i></button>
-      <button id="thumbsDown9" style="margin-left: 7px;"><i class="far fa-thumbs-down"></i> </button> </div>
+      <button id="thumbsUp9"><i class="far fa-thumbs-up hover:text-red-500"></i></button>
+      <button id="thumbsDown9" style="margin-left: 7px;"><i class="far fa-thumbs-down hover:text-red-500"></i> </button> </div>
     
     <div id="fountainG_10" class="fountainG p-2"></div>
     <div id="showName">
       <div id="showName10">Show 10</div>
       <div id="poster10"></div>
-      <button id="thumbsUp10"><i class="far fa-thumbs-up"></i></button>
-      <button id="thumbsDown10" style="margin-left: 7px;"><i class="far fa-thumbs-down"></i> </button> 
+      <button id="thumbsUp10"><i class="far fa-thumbs-up hover:text-red-500"></i></button>
+      <button id="thumbsDown10" style="margin-left: 7px;"><i class="far fa-thumbs-down hover:text-red-500"></i> </button> 
     </div>
 
           </div>
@@ -155,10 +163,10 @@
   <!-- <div id="netflixPage" class="hidden">
     <section>
       <div id="netflixBanner" class="relative bg-grey-900 text-teal-200 p-0 pb-5 flex content-end overflow-hidden">
-        <div class="relative flex-shrink-0 mx-2" style="height:200px!important; width:200px!important;">
-          <div class="absolute rounded-full h-25% w-25% overflow-hidden shadow-lg" style="bottom:-40px;">
-            <img id="NetFlix" class="h-5px w-5px object-contain"
-              src="C:\Users\13044\Desktop\project2_BingeWorthy\netflix logo.png" , alt="NetFlix Logo">
+        <div class="relative flex-shrink-0 mx-2" style="height:150px!important; width:150px!important;">
+          <div class="absolute rounded-full h-50% w-50% overflow-hidden shadow-lg" style="bottom:-20px;">
+            <img id="NetFlix" class="h-50% w-50% object-contain bg-white"
+              src="public\images\netflix logo.png" alt="NetFlix Logo">
           </div>
         </div>
         <div class="">
@@ -240,10 +248,9 @@
   <!-- <div id="huluPage" class="hidden">
     <section>
       <div id="huluBanner" class="relative bg-grey-900 text-teal-200 p-0 pb-5 flex content-end overflow-hidden">
-        <div class="relative flex-shrink-0 mx-2" style="height:200px!important; width:200px!important;">
-          <div class="absolute rounded-full h-full w-full overflow-hidden shadow-lg" style="bottom:-40px;">
-            <img id="HULU" class="h-full w-full" src="C:\Users\13044\Desktop\project2_BingeWorthy\hulu.png" ,
-              alt="HULU Logo">
+        <div class="relative flex-shrink-0 mx-2" style="height:150px!important; width:150px!important;">
+          <div class="absolute rounded-full h-full w-full overflow-hidden shadow-lg bg-white" style="bottom:-20px;">
+            <img id="HULU" class="h-80% w-80% pt-16" src="public\images\hulu.png" alt="HULU Logo">
           </div>
         </div>
         <div class="">
@@ -324,10 +331,10 @@
   <!-- <div id="amazonPage" class="hidden">
     <section>
       <div id="amazonBanner" class="relative bg-grey-900 text-teal-200 p-0 pb-5 flex content-end overflow-hidden">
-        <div class="relative flex-shrink-0 mx-2" style="height:200px!important; width:200px!important;">
-          <div class="absolute rounded-full h-full w-full overflow-hidden shadow-lg" style="bottom:-40px;">
-            <img id="Amazon" class="h-full w-full"
-              src="C:\Users\13044\Desktop\project2_BingeWorthy\amazon-logo-transparent.png" , alt="NetFlix Logo">
+        <div class="relative flex-shrink-0 mx-2" style="height:150px!important; width:150px!important;">
+          <div class="absolute rounded-full h-full w-full overflow-hidden shadow-lg bg-white" style="bottom:-20px;">
+            <img id="Amazon" class="h-80% w-80% bg-white pt-20"
+              src="public\images\amazon-logo-transparent.png" alt="Amazon Logo">
           </div>
         </div>
         <div class="">
@@ -409,10 +416,10 @@
   <!-- <div id="hboPage" class="hidden">
     <section>
       <div id="hboBanner" class="relative bg-grey-900 text-teal-200 p-0 pb-5 flex content-end overflow-hidden">
-        <div class="relative flex-shrink-0 mx-2" style="height:200px!important; width:200px!important;">
-          <div class="absolute rounded-full h-full w-full overflow-hidden shadow-lg" style="bottom:-40px;">
-            <img id="Amazon" class="h-full w-full"
-              src="C:\Users\13044\Desktop\project2_BingeWorthy\HBO-Logo.png" , alt="HBO Logo">
+        <div class="relative flex-shrink-0 mx-2" style="height:150px!important; width:150px!important;">>
+          <div class="absolute rounded-full h-full w-full overflow-hidden shadow-lg" style="bottom:-20px;">
+            <img id="Amazon" class="h-full w-full bg-white"
+              src="public\images\HBO-Logo.png" alt="HBO Logo">
           </div>
         </div>
         <div class="">
