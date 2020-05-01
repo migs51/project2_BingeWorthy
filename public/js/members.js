@@ -39,10 +39,8 @@ $(document).ready(function() {
   $(document).on("click", "button#hbo-btn", hboAll);
 
   //click handler showName1
-  console.log("here");
   $(document).on("click", "button#thumbsUp", thumbsUpFunction);
   $(document).on("click", "button#thumbsDown", thumbsDownFunction);
-  console.log("there");
   //click handler showName2
   $(document).on("click", "button#thumbsUp2", thumbsUpFunction2);
   $(document).on("click", "button#thumbsDown2", thumbsDownFunction2);
@@ -499,4 +497,37 @@ $(document).ready(function() {
   document.getElementById("nav-toggle").onclick = function() {
     document.getElementById("nav-content").classList.toggle("hidden");
   };
+});
+
+$("#showSearch").on("click", function() {
+  // save the character they typed into the character-search input
+  var searchedShow = $("#search")
+    .val()
+    .trim();
+
+  // run an AJAX GET-request for our servers api,
+  // including the user's character in the url
+  $.get("/api/" + searchedShow, function(data) {
+    // log the data to our console
+    console.log(data);
+    // empty to well-section before adding new content
+    $("#showWell").empty();
+    // if the data is not there, then return an error message
+    if (!data) {
+      $("#showWell").append(
+        "<h2> Sorry, we can't find any titles matching this name in our database </h2>"
+      );
+    } else {
+      // otherwise
+      // append the character name
+      $("#showWell").append(`<div id="fountainG">
+      <div id="fountainG_1" class="fountainG"></div>
+      <div>
+        <div id="showName1"> ${data.results_title}</div>
+        <div id="poster1"><img src = "${data.results_artwork_208x117}"></div>
+        <button id="thumbsUp"><i class="far fa-thumbs-up"></i></button>
+        <button id="thumbsDown" style="margin-left: 7px;"><i class="far fa-thumbs-down"></i> </button> </div>
+    </div>`);
+    }
+  });
 });

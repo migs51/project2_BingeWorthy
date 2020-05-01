@@ -29,7 +29,6 @@ margin-right: auto;
   text-align: center;
   padding-top: 15px;
   padding-bottom: 10px;
-  background-color: hotpink;
 }
 
 .center{
@@ -38,3 +37,10 @@ margin-right: auto;
   width: 75%;
 }
 
+/*#topShows{
+  margin-right: 20px;
+} */
+
+/* .content:not(.active){
+  display: none;
+} */
