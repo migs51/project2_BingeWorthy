@@ -31,9 +31,14 @@ $(document).ready(function() {
   var hbo = $("#hboPage");
   // var showName = $("#showName");
 
-  // This file just does a GET request to figure out which user is logged in
-  // and updates the HTML on the page
+ //click handlers to grab top shows by streaming service
+  $(document).on("click", "button#homepage", allShows);
   $(document).on("click", "button#netflix-btn", netflixAll);
+  $(document).on("click", "button#hulu-btn", huluAll);
+  $(document).on("click", "button#amazon-btn", amazonAll);
+  $(document).on("click", "button#hbo-btn", hboAll);
+
+
   //click handler showName1
   $(document).on("click", "button#thumbsUp", thumbsUpFunction);
   $(document).on("click", "button#thumbsDown", thumbsDownFunction);
@@ -133,6 +138,9 @@ function thumbsUpFunction3(event) {
     shows: showName3.html(),
     bingeable: true
   };
+  console.log(showName3.html());
+  console.log(userName.html());
+  console.log(userUpVote);
   upVote(userUpVote);
 }
 
@@ -273,6 +281,9 @@ function thumbsUpFunction10(event) {
     shows: showName10.html(),
     bingeable: true
   };
+  console.log(showName10.html());
+  console.log(userName.html());
+  console.log(userUpVote);
   upVote(userUpVote);
 }
 
@@ -361,6 +372,91 @@ function thumbsDownFunction10(event) {
     })
   };
 
+  //ajax request to get all hulu shows
+  function huluAll() {
+    $.get("api/shows/hulus").then(function(data) {
+      console.log(data);
+
+      showName1.text(data[0].results_title);
+      poster1.html(`<img src = ${data[0].results_artwork_208x117}>`);
+      showName2.text(data[1].results_title);
+      poster2.html(`<img src = ${data[1].results_artwork_208x117}>`);
+      showName3.text(data[2].results_title);
+      poster3.html(`<img src = ${data[2].results_artwork_208x117}>`);
+      showName4.text(data[3].results_title);
+      poster4.html(`<img src = ${data[3].results_artwork_208x117}>`);
+      showName5.text(data[4].results_title);
+      poster5.html(`<img src = ${data[4].results_artwork_208x117}>`);
+      showName6.text(data[5].results_title);
+      poster6.html(`<img src = ${data[5].results_artwork_208x117}>`);
+      showName7.text(data[6].results_title);
+      poster7.html(`<img src = ${data[6].results_artwork_208x117}>`);
+      showName8.text(data[7].results_title);
+      poster8.html(`<img src = ${data[7].results_artwork_208x117}>`);
+      showName9.text(data[8].results_title);
+      poster9.html(`<img src = ${data[8].results_artwork_208x117}>`);
+      showName10.text(data[9].results_title);
+      poster10.html(`<img src = ${data[9].results_artwork_208x117}>`);
+    })
+  };
+
+  //ajax request to get all amazon prime shows
+  function amazonAll() {
+    $.get("api/shows/amazons").then(function(data) {
+      console.log(data);
+
+      showName1.text(data[0].results_title);
+      poster1.html(`<img src = ${data[0].results_artwork_208x117}>`);
+      showName2.text(data[1].results_title);
+      poster2.html(`<img src = ${data[1].results_artwork_208x117}>`);
+      showName3.text(data[2].results_title);
+      poster3.html(`<img src = ${data[2].results_artwork_208x117}>`);
+      showName4.text(data[3].results_title);
+      poster4.html(`<img src = ${data[3].results_artwork_208x117}>`);
+      showName5.text(data[4].results_title);
+      poster5.html(`<img src = ${data[4].results_artwork_208x117}>`);
+      showName6.text(data[5].results_title);
+      poster6.html(`<img src = ${data[5].results_artwork_208x117}>`);
+      showName7.text(data[6].results_title);
+      poster7.html(`<img src = ${data[6].results_artwork_208x117}>`);
+      showName8.text(data[7].results_title);
+      poster8.html(`<img src = ${data[7].results_artwork_208x117}>`);
+      showName9.text(data[8].results_title);
+      poster9.html(`<img src = ${data[8].results_artwork_208x117}>`);
+      showName10.text(data[9].results_title);
+      poster10.html(`<img src = ${data[9].results_artwork_208x117}>`);
+    })
+  };
+
+    //ajax request to get all hbo shows
+    function hboAll() {
+      $.get("api/shows/hbos").then(function(data) {
+        console.log(data);
+  
+        showName1.text(data[0].results_title);
+        poster1.html(`<img src = ${data[0].results_artwork_208x117}>`);
+        showName2.text(data[1].results_title);
+        poster2.html(`<img src = ${data[1].results_artwork_208x117}>`);
+        showName3.text(data[2].results_title);
+        poster3.html(`<img src = ${data[2].results_artwork_208x117}>`);
+        showName4.text(data[3].results_title);
+        poster4.html(`<img src = ${data[3].results_artwork_208x117}>`);
+        showName5.text(data[4].results_title);
+        poster5.html(`<img src = ${data[4].results_artwork_208x117}>`);
+        showName6.text(data[5].results_title);
+        poster6.html(`<img src = ${data[5].results_artwork_208x117}>`);
+        showName7.text(data[6].results_title);
+        poster7.html(`<img src = ${data[6].results_artwork_208x117}>`);
+        showName8.text(data[7].results_title);
+        poster8.html(`<img src = ${data[7].results_artwork_208x117}>`);
+        showName9.text(data[8].results_title);
+        poster9.html(`<img src = ${data[8].results_artwork_208x117}>`);
+        showName10.text(data[9].results_title);
+        poster10.html(`<img src = ${data[9].results_artwork_208x117}>`);
+      })
+    };
+
+
   //For switching pages.
 
   $("#homepage").on("click", function() {
@@ -380,32 +476,32 @@ function thumbsDownFunction10(event) {
   //   netflix.removeClass("hidden");
   // });
 
-  $("#hulu-btn").on("click", function() {
-    console.log("ive been clicked");
-    netflix.addClass("hidden");
-    landingpage.addClass("hidden");
-    amazon.addClass("hidden");
-    hbo.addClass("hidden");
-    hulu.removeClass("hidden");
-  });
+  // $("#hulu-btn").on("click", function() {
+  //   console.log("ive been clicked");
+  //   netflix.addClass("hidden");
+  //   landingpage.addClass("hidden");
+  //   amazon.addClass("hidden");
+  //   hbo.addClass("hidden");
+  //   hulu.removeClass("hidden");
+  // });
 
-  $("#amazon-btn").on("click", function() {
-    console.log("ive been clicked");
-    netflix.addClass("hidden");
-    hulu.addClass("hidden");
-    landingpage.addClass("hidden");
-    hbo.addClass("hidden");
-    amazon.removeClass("hidden");
-  });
+  // $("#amazon-btn").on("click", function() {
+  //   console.log("ive been clicked");
+  //   netflix.addClass("hidden");
+  //   hulu.addClass("hidden");
+  //   landingpage.addClass("hidden");
+  //   hbo.addClass("hidden");
+  //   amazon.removeClass("hidden");
+  // });
 
-  $("#hbo-btn").on("click", function() {
-    console.log("ive been clicked");
-    netflix.addClass("hidden");
-    hulu.addClass("hidden");
-    amazon.addClass("hidden");
-    landingpage.addClass("hidden");
-    hbo.removeClass("hidden");
-  });
+  // $("#hbo-btn").on("click", function() {
+  //   console.log("ive been clicked");
+  //   netflix.addClass("hidden");
+  //   hulu.addClass("hidden");
+  //   amazon.addClass("hidden");
+  //   landingpage.addClass("hidden");
+  //   hbo.removeClass("hidden");
+  // });
 
   // For toggle the menu button
   document.getElementById("nav-toggle").onclick = function() {
