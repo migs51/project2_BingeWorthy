@@ -39,10 +39,8 @@ $(document).ready(function() {
   $(document).on("click", "button#hbo-btn", hboAll);
 
   //click handler showName1
-  console.log("here");
   $(document).on("click", "button#thumbsUp", thumbsUpFunction);
   $(document).on("click", "button#thumbsDown", thumbsDownFunction);
-  console.log("there");
   //click handler showName2
   $(document).on("click", "button#thumbsUp2", thumbsUpFunction2);
   $(document).on("click", "button#thumbsDown2", thumbsDownFunction2);
