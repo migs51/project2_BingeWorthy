@@ -362,7 +362,6 @@ $(document).ready(function() {
       showName10.text(data[9].results_title);
       poster10.html(`<img src = ${data[9].results_artwork_208x117}>`);
     });
-    
   }
 
   //ajax request to get all hulu shows
