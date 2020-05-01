@@ -368,7 +368,7 @@ $(document).ready(function() {
   function huluAll() {
     $.get("api/shows/hulus").then(function(data) {
       console.log(data);
-
+      // hululogo.html(`<img src ='public\images\hulu.png' alt= 'hulu logo'`)
       showName1.text(data[0].results_title);
       poster1.html(`<img src = ${data[0].results_artwork_208x117}>`);
       showName2.text(data[1].results_title);
