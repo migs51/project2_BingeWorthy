@@ -33,11 +33,49 @@ $(document).ready(function() {
 
   // This file just does a GET request to figure out which user is logged in
   // and updates the HTML on the page
-
+  $(document).on("click", "button#netflix-btn", netflixAll);
+  //click handler showName1
   $(document).on("click", "button#thumbsUp", thumbsUpFunction);
   $(document).on("click", "button#thumbsDown", thumbsDownFunction);
+  //click handler showName2
+  $(document).on("click", "button#thumbsUp2", thumbsUpFunction2);
+  $(document).on("click", "button#thumbsDown2", thumbsDownFunction2);
+  //click handler showName3
+  $(document).on("click", "button#thumbsUp3", thumbsUpFunction3);
+  $(document).on("click", "button#thumbsDown3", thumbsDownFunction3);
+  //click handler showName4
+  $(document).on("click", "button#thumbsUp4", thumbsUpFunction4);
+  $(document).on("click", "button#thumbsDown4", thumbsDownFunction4);
+  //click handler showName5
+  $(document).on("click", "button#thumbsUp5", thumbsUpFunction5);
+  $(document).on("click", "button#thumbsDown5", thumbsDownFunction5);
+  //click handler showName6
+  $(document).on("click", "button#thumbsUp6", thumbsUpFunction6);
+  $(document).on("click", "button#thumbsDown6", thumbsDownFunction6);
+  //click handler showName7
+  $(document).on("click", "button#thumbsUp7", thumbsUpFunction7);
+  $(document).on("click", "button#thumbsDown7", thumbsDownFunction7);
+  //click handler showName8
+  $(document).on("click", "button#thumbsUp8", thumbsUpFunction8);
+  $(document).on("click", "button#thumbsDown8", thumbsDownFunction8);
+  //click handler showName9
+  $(document).on("click", "button#thumbsUp9", thumbsUpFunction9);
+  $(document).on("click", "button#thumbsDown9", thumbsDownFunction9);
+  //click handler showName10
+  $(document).on("click", "button#thumbsUp10", thumbsUpFunction10);
+  $(document).on("click", "button#thumbsDown10", thumbsDownFunction10);
 
-  function thumbsUpFunction() {
+  
+
+
+
+
+console.log(showName1.html());
+console.log(showName10.html());
+    
+//ShowName 1 Like and Dislike Button functions
+  function thumbsUpFunction(event) {
+    event.preventDefault();
     var userUpVote = {
       users: userName.html(),
       shows: showName1.html(),
@@ -47,9 +85,11 @@ $(document).ready(function() {
     console.log(userName.html());
     console.log(userUpVote);
     upVote(userUpVote);
+    
   }
 
-  function thumbsDownFunction() {
+  function thumbsDownFunction(event) {
+    event.preventDefault();
     var userDownVote = {
       users: userName.html(),
       shows: showName1.html(),
@@ -57,7 +97,194 @@ $(document).ready(function() {
     };
 
     downVote(userDownVote);
+    
   }
+//ShowName 2 Like and Dislike Button functions
+  function thumbsUpFunction2(event) {
+    event.preventDefault();
+    var userUpVote = {
+      users: userName.html(),
+      shows: showName2.html(),
+      bingeable: true
+    };
+    console.log(showName2.html());
+    console.log(userName.html());
+    console.log(userUpVote);
+    upVote(userUpVote);
+    
+  }
+
+  function thumbsDownFunction2(event) {
+    event.preventDefault();
+    var userDownVote = {
+      users: userName.html(),
+      shows: showName2.html(),
+      bingeable: false
+    };
+
+    downVote(userDownVote);
+    
+  }
+//ShowName 3 Like and Dislike Button functions
+function thumbsUpFunction3(event) {
+  event.preventDefault();
+  var userUpVote = {
+    users: userName.html(),
+    shows: showName3.html(),
+    bingeable: true
+  };
+  upVote(userUpVote);
+}
+
+function thumbsDownFunction3(event) {
+  event.preventDefault();
+  var userDownVote = {
+    users: userName.html(),
+    shows: showName3.html(),
+    bingeable: false
+  };
+  downVote(userDownVote);
+}
+//ShowName 4 Like and Dislike Button functions
+function thumbsUpFunction4(event) {
+  event.preventDefault();
+  var userUpVote = {
+    users: userName.html(),
+    shows: showName4.html(),
+    bingeable: true
+  };
+  upVote(userUpVote);
+}
+
+function thumbsDownFunction4(event) {
+  event.preventDefault();
+  var userDownVote = {
+    users: userName.html(),
+    shows: showName4.html(),
+    bingeable: false
+  };
+  downVote(userDownVote);
+}
+//ShowName 5 Like and Dislike Button functions
+function thumbsUpFunction5(event) {
+  event.preventDefault();
+  var userUpVote = {
+    users: userName.html(),
+    shows: showName5.html(),
+    bingeable: true
+  };
+  upVote(userUpVote);
+}
+
+function thumbsDownFunction5(event) {
+  event.preventDefault();
+  var userDownVote = {
+    users: userName.html(),
+    shows: showName5.html(),
+    bingeable: false
+  };
+  downVote(userDownVote);
+}
+//ShowName 6 Like and Dislike Button functions
+function thumbsUpFunction6(event) {
+  event.preventDefault();
+  var userUpVote = {
+    users: userName.html(),
+    shows: showName6.html(),
+    bingeable: true
+  };
+  upVote(userUpVote);
+}
+
+function thumbsDownFunction6(event) {
+  event.preventDefault();
+  var userDownVote = {
+    users: userName.html(),
+    shows: showName6.html(),
+    bingeable: false
+  };
+  downVote(userDownVote);
+}
+//ShowName 7 Like and Dislike Button functions
+function thumbsUpFunction7(event) {
+  event.preventDefault();
+  var userUpVote = {
+    users: userName.html(),
+    shows: showName7.html(),
+    bingeable: true
+  };
+  upVote(userUpVote);
+}
+
+function thumbsDownFunction7(event) {
+  event.preventDefault();
+  var userDownVote = {
+    users: userName.html(),
+    shows: showName7.html(),
+    bingeable: false
+  };
+  downVote(userDownVote);
+}
+//ShowName 8 Like and Dislike Button functions
+function thumbsUpFunction8(event) {
+  event.preventDefault();
+  var userUpVote = {
+    users: userName.html(),
+    shows: showName8.html(),
+    bingeable: true
+  };
+  upVote(userUpVote);
+}
+
+function thumbsDownFunction8(event) {
+  event.preventDefault();
+  var userDownVote = {
+    users: userName.html(),
+    shows: showName8.html(),
+    bingeable: false
+  };
+  downVote(userDownVote);
+}
+//ShowName 9 Like and Dislike Button functions
+function thumbsUpFunction9(event) {
+  event.preventDefault();
+  var userUpVote = {
+    users: userName.html(),
+    shows: showName9.html(),
+    bingeable: true
+  };
+  upVote(userUpVote);
+}
+
+function thumbsDownFunction9(event) {
+  event.preventDefault();
+  var userDownVote = {
+    users: userName.html(),
+    shows: showName9.html(),
+    bingeable: false
+  };
+  downVote(userDownVote);
+}
+//ShowName 10 Like and Dislike Button functions
+function thumbsUpFunction10(event) {
+  event.preventDefault();
+  var userUpVote = {
+    users: userName.html(),
+    shows: showName10.html(),
+    bingeable: true
+  };
+  upVote(userUpVote);
+}
+
+function thumbsDownFunction10(event) {
+  event.preventDefault();
+  var userDownVote = {
+    users: userName.html(),
+    shows: showName10.html(),
+    bingeable: false
+  };
+  downVote(userDownVote);
+}
 
   //ajax request to display user Email on DOM
   $.get("/api/user_data").then(function(data) {
@@ -107,7 +334,7 @@ $(document).ready(function() {
   allShows();
 
   //netflix top shows upon click
-  netflix.click(function() {
+  function netflixAll() {
     $.get("api/shows/netflixes").then(function(data) {
       console.log(data);
 
@@ -131,8 +358,8 @@ $(document).ready(function() {
       poster9.html(`<img src = ${data[8].results_artwork_208x117}>`);
       showName10.text(data[9].results_title);
       poster10.html(`<img src = ${data[9].results_artwork_208x117}>`);
-    });
-  });
+    })
+  };
 
   //For switching pages.
 
@@ -144,14 +371,14 @@ $(document).ready(function() {
     hbo.addClass("hidden");
     landingpage.removeClass("hidden");
   });
-  $("#netflix-btn").on("click", function() {
-    console.log("ive been clicked");
-    landingpage.addClass("hidden");
-    hulu.addClass("hidden");
-    amazon.addClass("hidden");
-    hbo.addClass("hidden");
-    netflix.removeClass("hidden");
-  });
+  // $("#netflix-btn").on("click", function() {
+  //   console.log("ive been clicked");
+  //   landingpage.addClass("hidden");
+  //   hulu.addClass("hidden");
+  //   amazon.addClass("hidden");
+  //   hbo.addClass("hidden");
+  //   netflix.removeClass("hidden");
+  // });
 
   $("#hulu-btn").on("click", function() {
     console.log("ive been clicked");
