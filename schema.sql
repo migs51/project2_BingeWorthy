@@ -5,15 +5,30 @@ CREATE DATABASE binge_db;
 
 USE binge_db;
 
-CREATE TABLE shows (
-  id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  title VARCHAR(100) NOT NULL,
-  description VARCHAR(255) NOT NULL,
-  genre VARCHAR(100) NOT NULL,
-  release_date INT NOT NULL,
-  streaming_service VARCHAR(100) NOT NULL,
-  binge_rank INT NOT NULL
-);
+-- CREATE TABLE shows (
+--   id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+--   title VARCHAR(100) NOT NULL,
+--   description VARCHAR(255) NOT NULL,
+--   genre VARCHAR(100) NOT NULL,
+--   release_date INT NOT NULL,
+--   streaming_service VARCHAR(100) NOT NULL,
+--   binge_rank INT NOT NULL
+-- );
+
+CREATE TABLE ShowInfo (
+  Title VARCHAR(100) NOT NULL PRIMARY KEY,
+  Poster VARCHAR(100) NOT NULL,
+  Plot VARCHAR(255) NOT NULL,
+  RATED VARCHAR(100) NOT NULL,
+  Writers VARCHAR(100) NULL,
+  Actors VARCHAR(100) NULL,
+  TotalSeasons INT NULL,
+  Released VARCHAR(100) NULL,
+  Genres VARCHAR(100) NOT NULL,
+  Metascore INT NULL,
+  imdbRating DECIMAL(3,1) NULL
+  );
+
 
 -- CREATE TABLE ratings (
   -- id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
@@ -25,9 +40,9 @@ CREATE TABLE shows (
   -- web_scraper_ranking INT NOT NULL
 -- );
 
-CREATE TABLE recommendation (
-  id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  users VARCHAR(100) NOT NULL,
-  shows VARCHAR(100) NOT NULL,
-  bingeable BOOLEAN NOT NULL
-);
+-- CREATE TABLE recommendation (
+--   id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+--   users VARCHAR(100) NOT NULL,
+--   shows VARCHAR(100) NOT NULL,
+--   bingeable BOOLEAN NOT NULL
+-- );
