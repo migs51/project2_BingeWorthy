@@ -97,7 +97,7 @@ module.exports = function(app) {
         title: req.params.title
       }
     }).then(function(results) {
-      res.json(results);
+      return res.json(results);
     });
   });
 
@@ -136,7 +136,8 @@ module.exports = function(app) {
   // Route for signing up a user. The user's password is automatically hashed and stored securely thanks to
   // how we configured our Sequelize User Model. If the user is created successfully, proceed to log the user in,
   // otherwise send back an error
-  app.post("/api/User", function(req, res) {
+  app.post("/api/signup", function(req, res) {
+    console.log(req.body);
     db.User.create({
       email: req.body.email,
       password: req.body.password
@@ -166,6 +167,26 @@ module.exports = function(app) {
       res.json({
         email: req.user.email,
         id: req.user.id
+      });
+    }
+  });
+
+  app.get("/api/:allShows?", function(req, res) {
+    if (req.params.allShows) {
+      // Display the JSON for ONLY that character.
+      // (Note how we're using the ORM here to run our searches)
+      db.allShows
+        .findOne({
+          where: {
+            results_title: req.params.allShows
+          }
+        })
+        .then(function(result) {
+          return res.json(result);
+        });
+    } else {
+      db.allShows.findAll().then(function(result) {
+        return res.json(result);
       });
     }
   });
