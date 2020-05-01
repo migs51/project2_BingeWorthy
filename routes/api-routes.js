@@ -46,8 +46,8 @@ module.exports = function(app) {
       });
   });
 
-   //Route for top 10 Amazon Prime shows
-   app.get("/api/shows/amazons", function(req, res) {
+  //Route for top 10 Amazon Prime shows
+  app.get("/api/shows/amazons", function(req, res) {
     db.amazons
       .findAll({
         limit: 10
@@ -58,18 +58,17 @@ module.exports = function(app) {
       });
   });
 
-     //Route for top 10 HBO shows
-     app.get("/api/shows/hbos", function(req, res) {
-      db.hbos
-        .findAll({
-          limit: 10
-          // order: ["bingeRank", "DESC"]
-        })
-        .then(function(results) {
-          res.json(results);
-        });
-    });
-
+  //Route for top 10 HBO shows
+  app.get("/api/shows/hbos", function(req, res) {
+    db.hbos
+      .findAll({
+        limit: 10
+        // order: ["bingeRank", "DESC"]
+      })
+      .then(function(results) {
+        res.json(results);
+      });
+  });
 
   //Route for displaying shows by streaming platform -JS
   app.get("/api/shows/streamingService/:streamingService", function(req, res) {
