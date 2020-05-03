@@ -183,26 +183,11 @@ $(document).ready(function() {
     document.getElementById("nav-content").classList.toggle("hidden");
   };
 
-
-
-
-
   // For getting bingeable rating from backend
 
-
-
-// get route for grabbing counter of westworld
-$.get("/api/Recommendations/bingeable/westworld").then(function(data){
-
-
-  // log thumbs up counter 
-console.log(data);
-
-})
-
-
-
-
-
-
+  // get route for grabbing counter of westworld
+  $.get("/api/Recommendations/bingeable/westworld").then(function(data) {
+    // log thumbs up counter
+    console.log(data);
+  });
 });
