@@ -191,8 +191,6 @@ module.exports = function(app) {
     });
   });
 
-
-
   app.get("/api/:allShows?", function(req, res) {
     if (req.params.allShows) {
       // Display the JSON for ONLY that character.
@@ -212,10 +210,4 @@ module.exports = function(app) {
       });
     }
   });
-
-
-
-
 };
-
-
