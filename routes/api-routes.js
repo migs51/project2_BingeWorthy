@@ -190,24 +190,32 @@ module.exports = function(app) {
       res.json(bingeable);
     });
   });
-};
 
-app.get("/api/:allShows?", function(req, res) {
-  if (req.params.allShows) {
-    // Display the JSON for ONLY that character.
-    // (Note how we're using the ORM here to run our searches)
-    db.allShows
-      .findOne({
-        where: {
-          results_title: req.params.allShows
-        }
-      })
-      .then(function(result) {
+
+
+  app.get("/api/:allShows?", function(req, res) {
+    if (req.params.allShows) {
+      // Display the JSON for ONLY that character.
+      // (Note how we're using the ORM here to run our searches)
+      db.allShows
+        .findOne({
+          where: {
+            results_title: req.params.allShows
+          }
+        })
+        .then(function(result) {
+          return res.json(result);
+        });
+    } else {
+      db.allShows.findAll().then(function(result) {
         return res.json(result);
       });
-  } else {
-    db.allShows.findAll().then(function(result) {
-      return res.json(result);
-    });
-  }
-});
+    }
+  });
+
+
+
+
+};
+
+
