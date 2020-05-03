@@ -134,25 +134,23 @@ module.exports = function(app) {
     }
   });
 
+  // route for getting data in our recommendations database for thumbs up counter
 
-  // route for getting data in our recommendations database for thumbs up counter 
-
-  app.get("/api/Recommendations/bingeable/:shows", function (req, res) {
+  app.get("/api/Recommendations/bingeable/:shows", function(req, res) {
     db.Recommendation.findAll({
       where: {
         shows: req.params.shows
       }
-    }).then(function (results) {
-      var bingeable = 0
+    }).then(function(results) {
+      var bingeable = 0;
       for (var i = 0; i < results.length; i++) {
-        if (results[i].bingeable) { bingeable++ }
-
-        else { bingeable-- }
-
-
-      };
+        if (results[i].bingeable) {
+          bingeable++;
+        } else {
+          bingeable--;
+        }
+      }
       res.json(bingeable);
-    })
-
-  })
-}
+    });
+  });
+};
