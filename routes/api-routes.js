@@ -171,23 +171,43 @@ module.exports = function(app) {
     }
   });
 
-  app.get("/api/:allShows?", function(req, res) {
-    if (req.params.allShows) {
-      // Display the JSON for ONLY that character.
-      // (Note how we're using the ORM here to run our searches)
-      db.allShows
-        .findOne({
-          where: {
-            results_title: req.params.allShows
-          }
-        })
-        .then(function(result) {
-          return res.json(result);
-        });
-    } else {
-      db.allShows.findAll().then(function(result) {
-        return res.json(result);
-      });
-    }
+  // route for getting data in our recommendations database for thumbs up counter
+
+  app.get("/api/Recommendations/bingeable/:shows", function(req, res) {
+    db.Recommendation.findAll({
+      where: {
+        shows: req.params.shows
+      }
+    }).then(function(results) {
+      var bingeable = 0;
+      for (var i = 0; i < results.length; i++) {
+        if (results[i].bingeable) {
+          bingeable++;
+        } else {
+          bingeable--;
+        }
+      }
+      res.json(bingeable);
+    });
   });
 };
+
+app.get("/api/:allShows?", function(req, res) {
+  if (req.params.allShows) {
+    // Display the JSON for ONLY that character.
+    // (Note how we're using the ORM here to run our searches)
+    db.allShows
+      .findOne({
+        where: {
+          results_title: req.params.allShows
+        }
+      })
+      .then(function(result) {
+        return res.json(result);
+      });
+  } else {
+    db.allShows.findAll().then(function(result) {
+      return res.json(result);
+    });
+  }
+});
